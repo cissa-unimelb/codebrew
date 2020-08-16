@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<!--
+	Website adapted from:
+	Archetype by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
+
+<html>
+<head>
+	<title>Codebrew 2020</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="manifest" href="manifest.json">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#fff">
+	<meta name="application-name" content="Codebrew 2019">
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="apple-touch-icon-1024x1024.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="Codebrew 2019">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
+		  href="apple-touch-startup-image-320x460.png">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+		  href="apple-touch-startup-image-640x920.png">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+		  href="apple-touch-startup-image-640x1096.png">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+		  href="apple-touch-startup-image-750x1294.png">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)"
+		  href="apple-touch-startup-image-1182x2208.png">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)"
+		  href="apple-touch-startup-image-1242x2148.png">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)"
+		  href="apple-touch-startup-image-748x1024.png">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)"
+		  href="apple-touch-startup-image-768x1004.png">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
+		  href="apple-touch-startup-image-1496x2048.png">
+	<link rel="apple-touch-startup-image"
+		  media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
+		  href="apple-touch-startup-image-1536x2008.png">
+	<link rel="icon" type="image/png" sizes="228x228" href="coast-228x228.png">
+	<meta name="msapplication-TileColor" content="#fff">
+	<meta name="msapplication-TileImage" content="mstile-144x144.png">
+	<meta name="msapplication-config" content="browserconfig.xml">
+	<link rel="yandex-tableau-widget" href="yandex-browser-manifest.json">
+	<script>
+
+		var end = new Date('04/14/2019 2:00 PM');
+
+		var _second = 1000;
+		var _minute = _second * 60;
+		var _hour = _minute * 60;
+		var _day = _hour * 24;
+		var timer;
+
+		function showRemaining() {
+			var now = new Date();
+			var distance = end - now;
+
+			if (distance < 0) {
+
+				clearInterval(timer);
+				document.getElementById('countdown').innerHTML = "Stop hacking!";
+
+				return;
+			}
+
+			var days = Math.floor(distance/_day);
+			var hours = ("0" + Math.floor((distance % _day) / _hour)).slice(-2);
+			var minutes = ("0" + Math.floor((distance % _hour) / _minute)).slice(-2);
+			var seconds = ("0" + Math.floor((distance % _minute) / _second)).slice(-2);
+
+			document.getElementById('countdown').innerHTML = (days) ? days + ' days<br>' : '';
+			document.getElementById('countdown').innerHTML += hours + ':';
+			document.getElementById('countdown').innerHTML += minutes + ':';
+			document.getElementById('countdown').innerHTML += seconds;
+		}
+
+		timer = setInterval(showRemaining, 1000);
+	</script>
+</head>
+<body class="landing">
+
+<!-- Header -->
+<header id="header" class="alt">
+	<h1 id="logo"></h1>
+	<nav id="nav">
+		<ul>
+			<li><a href="https://www.facebook.com/hashtag/codebrew19"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.instagram.com/explore/tags/codebrew19/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+			<li><a href="https://twitter.com/hashtag/codebrew19"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+		</ul>
+	</nav>
+</header>
+
+<!-- Banner Splash -->
+<section id="banner">
+	<div class="content">
+		<div class="details">
+			<div class="column">
+				<header>
+					<h2>&nbsp;</h2>
+					<h2>Hacking stops in &hellip;</h2>
+					<div id="countdown">&hellip;</div>
+					<h3>#codebrew19</h3>
+					<div class="social-media">
+						<a href="https://www.facebook.com/hashtag/codebrew19"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+						<a href="https://www.instagram.com/explore/tags/codebrew19/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						<a href="https://twitter.com/hashtag/codebrew19"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					</div>
+					<p><br>The Community Hackathon.<br>12th April to 14th April 2019.</p>
+				</header>
+			</div>
+			<div class="second-column" style="text-align: right;">
+				<h2>&nbsp;</h2>
+				<h2>Envisioning a Better Melbourne</h2>
+				<p class="info">As one of the world’s best and most livable cities, Melbourne relied on
+					many innovations and initiatives brought on by residents and visitors alike.
+					As the city grows and evolves, Melbourne continues to be a melting pot where
+					ideas brew and visions interchange. From lifestyle to infrastructure to education,
+					there are still many fronts on which improvements can sprout. To that end, what’s
+					your vision for a better Melbourne?</p>
+				<p><a href="https://www.eventbrite.com.au/e/codebrew-2019-envisioning-a-better-melbourne-tickets-59567123871" class="button huge disabled" >Tickets Sold Out!</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Venue and Map -->
+<section id="venue" class="wrapper cta">
+	<div class="inner">
+		<header>
+			<h2>Venue</h2>
+			Our team forming and ideation events on Friday evening will take place at the
+			<a href="https://maps.unimelb.edu.au/parkville/building/158/106" target="_blank">Yasuko
+				Hiraoka Myer Room</a> at the Sidney Myer Building. The hack and all other events
+			during the weekend will take place at the
+			<a href="https://maps.unimelb.edu.au/parkville/building/263" target="_blank">Kwong
+				Lee Dow Building</a>.
+			<br><br>
+			Show Map:<br>
+			<select class="switcher">
+				<option value="https://maps.unimelb.edu.au/parkville/building/158/106?SQ_DESIGN_NAME=embed&plain=1">
+					Yasuko Hiraoka Myer Room</option>
+				<option value="https://maps.unimelb.edu.au/parkville/building/263?SQ_DESIGN_NAME=embed&plain=1">
+					Kwong Lee Dow Building</option>
+			</select>
+		</header>
+		<iframe class="switch-target" height='450' width='100%' src="" frameborder='0'></iframe>
+		<br><br>
+	</div>
+</section>
+
+<!-- Schedule -->
+<section id="schedule" class="wrapper">
+	<div class="inner">
+		<header class="major">
+			<h2>Schedule</h2>
+		</header>
+		<ul class="actions small">
+			<li>
+				<a class="button" style="cursor: pointer;" id="friday" onclick='switchSchedule("friday")'>Friday</a>
+			</li>
+			<li>
+				<a class="button" style="cursor: pointer;" id="saturday" onclick='switchSchedule("saturday")'>Saturday</a>
+			</li>
+			<li>
+				<a class="button" style="cursor: pointer;" id="sunday" onclick='switchSchedule("sunday")'>Sunday</a>
+			</li>
+		</ul>
+		<div class="table-wrapper">
+			<table id="eventschedule">
+				<tr>
+					<td> </td>
+					<td> </td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</section>
+
+<!-- Diversity -->
+<section id="diversity" class="wrapper cta">
+	<div class="inner">
+		<header>
+			<h2>Diversity</h2>
+		</header>
+		<p>Supporting and promoting diversity in tech is one of CISSA's core values,
+			which is why we've reserved discounted Codebrew tickets for those belonging
+			to under-represented groups within Computer Science and related disciplines.<br><br>
+			If you've applied for Diversity tickets, check your email inbox!</p>
+	</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="wrapper">
+	<div class="inner">
+		<ul class="features">
+			<li><h2>Frequently Asked Questions</h2></li>
+			<li>
+				<h3>What is Codebrew?</h3>
+				<p>
+					Codebrew is an annual hackathon run by students, for students. Form teams of 4 to 6 and
+					hack together a prototype based on a theme over the course of 27 hours.
+				</p>
+			</li>
+			<li>
+				<h3>Who can attend?</h3>
+				<p>
+					Any university student can attend Codebrew! While the event will be held within
+					the University of Melbourne campus, we invite students from other universities
+					to participate.
+				</p>
+			</li>
+			<li>
+				<h3>When is it?</h3>
+				<p>
+					Codebrew will be held from the 12th (Friday) to the 14th (Sunday) of April.
+					The 'hack' will commence from Saturday morning to Sunday afternoon.
+				</p>
+			</li>
+			<li>
+				<h3>Why should I go?</h3>
+				<p>
+					Meet like-minded students, network with industry leaders,
+					give yourself an edge when applying for internships and grad jobs,
+					get free swag, win prizes and make a difference!
+				</p>
+			</li>
+			<li>
+				<h3>Do I need a team?</h3>
+				<p>
+					Not at all! While you can sign up with teammates from the beginning,
+					you can also sign up on your own and form/join teams on Friday night.
+				</p>
+			</li>
+			<li>
+				<h3>Do we stay overnight?</h3>
+				<p>
+					You're welcome to stay overnight or go home and come back in the
+					morning. We encourage you to decide this as a team before the 'hack'
+					starts so that you can be prepared.
+				</p>
+			</li>
+			<li>
+				<h3>Who runs Codebrew?</h3>
+				<p>
+					Codebrew is run by <a href="https://cissa.org.au" target="_blank">CISSA</a>
+					- the Computing and Information Systems Students Association at the University
+					of Melbourne - with the support of our generous sponsors.
+					<br><br>
+					We run exciting events and promote opportunities just like this!
+					<a href="https://cissa.org.au/signup" target="_blank">join us as a member</a>
+					and follow us on social media (top right of this page) so you won't miss out!
+				</p>
+			</li>
+			<li>
+				<h3>Why isn't this event free?</h3>
+				<p>
+					CISSA is a non-for-profit association. To run large events like
+					Codebrew we need funding to cover expenses of the hackathon.
+					<br><br>
+					The cost of your ticket covers everything from venue, food, prizes,
+					to t-shirts.
+				</p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="content">
+		<div class="inner">
+			<header class="major">
+				<h2 class="sponsorcat">Sponsors</h2>
+			</header>
+			<section class="about">
+				<h3>DIAMOND</h3>
+				<ul class="actions">
+					<li><img src="images/sponsors/deloitte.jpg" height="80"></li>
+				</ul>
+			</section>
+			<section class="about">
+				<h3>PLATINUM</h3>
+				<ul class="actions">
+					<li><img src="images/sponsors/janestreet.png" height="45"></li>
+					<li><img src="images/sponsors/microsoft.png" height="40"></li>
+					<li><img src="images/sponsors/coles.png" height="40"></li>
+				</ul>
+			</section>
+			<section class="about">
+				<h3>GOLD</h3>
+				<ul class="actions">
+					<li><img src="images/sponsors/ey.png" width="60"></li>
+					<li><img src="images/sponsors/telstra.PNG" width="60"></li>
+					<li><img src="images/sponsors/atlassian.png" width="60"></li>
+					<li><img src="images/sponsors/optiver.png" height="40"></li>
+				</ul>
+			</section>
+		</div>
+		<p style="text-align: center">&copy; <a href="https://cissa.org.au">CISSA</a>. All rights reserved.
+	</div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script>
+	var friday = [
+		["6:30 pm", "Industry Expo + Food"],
+		["7:30 pm", "Welcome + Housekeeping"],
+		["7:45 pm", "Team Formation + Ideation Workshop"],
+		["9:00 pm", "Wrap-Up!"]
+	];
+
+	var saturday = [
+		["9:00 am", "Registrations + Morning Tea"],
+		["10:00 am", "START HACKING"],
+		["11:00 am", "Git Workshop (optional)"],
+		["12:00 pm", "Lunch"],
+		["1:00 pm", "Hacking"],
+		["2:00 pm", "UX Workshop (optional)"],
+		["3:00 pm", "Hacking"],
+		["7:00 pm", "Dinner"],
+		["8:00 pm", "Hacking"]
+		//["10:00 pm", "Doors Lock"]
+	];
+
+	var sunday = [
+		["9:00 am", "Morning Tea"],
+		["10:00 am", "Hacking"],
+		["11:00 am", "Pitching Workshop (optional)"],
+		["12:00 pm", "Hacking"],
+		["1:00 pm", "Lunch"],
+		["2:00 pm", "STOP HACKING + Pitch Preparation"],
+		["3:00 pm", "Pitching, Judging, Awards"],
+		["5:30 pm", "Wrap-Up!"]
+	];
+
+	// Map switcher
+	var switcher$ = $('.switcher'),          // select element
+			switchTarget$ = $('.switch-target'); // iframe
+
+	switcher$.on('change', switchIframeSrc); // event binding
+
+	// our function to switch the iframe src
+	function switchIframeSrc() {
+		// set the 'src' attribute of the iframe
+		// to the value of the selected option
+		switchTarget$.attr('src', switcher$.val());
+	}
+
+	// function to load new schedule table
+	function switchSchedule(day) {
+		// Grey out the button pressed, un-grey out the others. I know, I'm lazy.
+		document.getElementById(day).classList.add("disabled");
+		switch(day) {
+			case "friday":
+				document.getElementById("saturday").classList.remove("disabled");
+				document.getElementById("sunday").classList.remove("disabled");
+				break;
+			case "saturday":
+				document.getElementById("friday").classList.remove("disabled");
+				document.getElementById("sunday").classList.remove("disabled");
+				break;
+			case "sunday":
+				document.getElementById("saturday").classList.remove("disabled");
+				document.getElementById("friday").classList.remove("disabled");
+				break;
+			default:
+				console.log("invalid day");
+				break;
+		}
+		// Get the nested list schedule, erase existing list and replace with new one.
+		day = eval(day);
+		var table = document.getElementById('eventschedule');
+		var newRow;
+		while(table.hasChildNodes()) {
+			table.removeChild(table.firstChild);
+		}
+		for (var i=0; i<day.length; i++) {
+			newRow = table.insertRow(i);
+			for (var j=0; j<day[i].length; j++) {
+				newRow.insertCell(j).innerHTML = day[i][j];
+			}
+		}
+	}
+
+	// call the method on load
+	switchIframeSrc();
+	switchSchedule("friday");
+</script>
+
+</body>
+</html>
