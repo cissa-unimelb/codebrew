@@ -4224,7 +4224,7 @@ body.is-mobile #banner {
     padding-left: 0;
   }
   #footer .content > .inner .about {
-    width: 100%;
+    width: 80%;
     margin: 0;
   }
 }
@@ -4426,4 +4426,12 @@ body.is-mobile #footer {
   }
 }
 
+#footer .content > .inner {
+  margin-left: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 /*# sourceMappingURL=main.css.map */
