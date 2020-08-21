@@ -74,8 +74,8 @@
 	<link rel="yandex-tableau-widget" href="yandex-browser-manifest.json">
 	<script>
 
-		var end = new Date('09/26/2020 10:00 AM');
-
+		var start = new Date('09/26/2020 10:00 AM');
+		var end = new Date('09/27/2020 3:00 PM');
 		var _second = 1000;
 		var _minute = _second * 60;
 		var _hour = _minute * 60;
@@ -84,14 +84,24 @@
 
 		function showRemaining() {
 			var now = new Date();
-			var distance = end - now;
 
-			if (distance < 0) {
+			if (start - now > 0){
+				//&hellip
+				document.getElementById('start_stop_hacking').innerHTML = "Hacking starts in";
+			}else{
+				document.getElementById('start_stop_hacking').innerHTML = "Hacking stops in";
+			}
+			
 
+			if (end-now < 0) {
+				var distance = end - now;
 				clearInterval(timer);
-				document.getElementById('countdown').innerHTML = "Start hacking!";
-
+				document.getElementById('countdown').innerHTML = "Stop hacking!";
 				return;
+			}else if (start-now < 0){
+				var distance = end - now;
+			}else{
+				var distance = start - now;
 			}
 
 			var days = Math.floor(distance/_day);
@@ -129,7 +139,7 @@
 			<div class="column">
 				<header>
 					<h2>&nbsp;</h2>
-					<h2>Hacking starts in &hellip;</h2>
+					<h2 id = "start_stop_hacking"></h2>
 					<div id="countdown">&hellip;</div>
 					<h3>#codebrew20</h3>
 					<div class="social-media">
