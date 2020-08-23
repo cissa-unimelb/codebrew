@@ -3840,10 +3840,10 @@ body.landing {
 }
 /* Banner */
 #banner {
-  background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, rgba(248, 184, 2, 0.65), rgba(103, 40, 138, 0.65)), url("../../images/2020_1.jpg");
-  background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, rgba(248, 184, 2, 0.65), rgba(103, 40, 138, 0.65)), url("../../images/2020_1.jpg");
-  background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, rgba(248, 184, 2, 0.65), rgba(103, 40, 138, 0.65)), url("../../images/2020_1.jpg");
-  background-image: url("images/overlay.png"), linear-gradient(45deg, rgba(248, 184, 2, 0.65), rgba(103, 40, 138, 0.65)), url("../../images/2020_1.jpg");
+  background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, rgba(248, 184, 2, 0.65), rgba(103, 40, 138, 0.65)), url("../../images/2020_codebrew.png");
+  background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, rgba(248, 184, 2, 0.65), rgba(103, 40, 138, 0.65)), url("../../images/2020_codebrew.png");
+  background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, rgba(248, 184, 2, 0.65), rgba(103, 40, 138, 0.65)), url("../../images/2020_codebrew.jpg");
+  background-image: url("images/overlay.png"), linear-gradient(45deg, rgba(248, 184, 2, 0.65), rgba(103, 40, 138, 0.65)), url("../../images/2020_codebrew.png");
   background-position: center center;
   background-size: auto, cover, cover;
   background-attachment: fixed, fixed, fixed;
@@ -3959,8 +3959,8 @@ body.landing {
   text-align: right;
 }
 #banner .content #countdown {
-  font-size: 100px;
-  line-height: 100px;
+  font-size: 80px;
+  line-height: 80px;
   margin: 0 0 1em 0;
 }
 #banner .details {
@@ -4017,8 +4017,8 @@ body.is-mobile #banner {
 @media screen and (max-width: 980px) {
   #banner .content #countdown {
     font-size: 60px;
-    line-height: 60px;
-    margin: 0 0 0.75em 0;
+    line-height: 40px;
+    margin: 0 0 1em 0;
   }
   #banner .content > .inner {
     -moz-flex-direction: column;
@@ -4075,7 +4075,7 @@ body.is-mobile #banner {
   }
   #banner .content #countdown {
     font-size: 50px;
-    line-height: 50px;
+    line-height: 30px;
   }
 }
 @media screen and (max-width: 320px) and (orientation: portrait) {
@@ -4463,4 +4463,6 @@ html, body {
 }
 
 
-
+body {
+  font-family: -apple-system, BlinkMacSystemFont,sans-serif;
+}
