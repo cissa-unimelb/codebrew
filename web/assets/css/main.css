@@ -3621,7 +3621,7 @@ body.landing {
   }
 }
 #header {
-  background: #8e38bd;
+  background: #bf7de2;
   color: #ffffff;
   height: 4.5em;
   left: 0;
@@ -3660,9 +3660,8 @@ body.landing {
 #header h1:before {
   border-radius: 100%;
   color: #5f9dd2;
-  content: url("../../images/codebrew.png");
   display: inline-block;
-  font-size: 0.9em;
+  font-size: 0.3em;
   height: 2em;
   line-height: 2em;
   margin-top: 1em;
