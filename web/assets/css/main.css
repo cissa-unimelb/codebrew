@@ -4488,6 +4488,9 @@ body {
     margin-top: 0px;
   }
   .column {
-    margin-top:0px;
+    margin-top:50px;
+  }
+  .container {
+    padding-left:0px;
   }
 }
