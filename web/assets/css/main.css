@@ -3995,7 +3995,7 @@ body.is-mobile #banner {
 }
 @media screen and (max-width: 980px) and (orientation: landscape) {
   #banner {
-    height: 250vh;
+    height: 300vh;
     max-height: 45em;
   }
 }
@@ -4017,7 +4017,7 @@ body.is-mobile #banner {
 @media screen and (max-width: 980px) {
   #banner .content #countdown {
     font-size: 60px;
-    line-height: 40px;
+    line-height: 60px;
     margin: 0 0 1em 0;
   }
   #banner .content > .inner {
@@ -4075,7 +4075,7 @@ body.is-mobile #banner {
   }
   #banner .content #countdown {
     font-size: 50px;
-    line-height: 30px;
+    line-height: 50px;
   }
 }
 @media screen and (max-width: 320px) and (orientation: portrait) {
@@ -4465,4 +4465,29 @@ html, body {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont,sans-serif;
+}
+
+
+
+.second-column {
+  text-align: left;
+  margin-top:50px;
+}
+
+.column {
+  margin-top:50px;
+}
+
+
+@media screen and (max-width:822px) {
+   #banner {
+    height:1000px;
+  }
+  .second-column {
+    text-align: center;
+    margin-top: 0px;
+  }
+  .column {
+    margin-top:0px;
+  }
 }
