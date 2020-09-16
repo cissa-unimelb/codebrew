@@ -4091,6 +4091,9 @@ body.is-mobile #banner {
 .social-media .fa {
   margin: 0 10px;
 }
+#contact .social-media {
+  font-size: 2em;
+}
 
 /* Footer */
 #footer {
