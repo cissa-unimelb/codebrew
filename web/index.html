@@ -8,12 +8,25 @@
 
 <html>
 <head>
-	<title>Codebrew 2020</title>
+	<title>Codebrew 2021</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="assets/css/main.css?version=8" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"/>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<link rel="shortcut icon" href="favicon.ico?version=2">
@@ -73,8 +86,8 @@
 	<link rel="yandex-tableau-widget" href="yandex-browser-manifest.json">
 	<script>
 
-		var start = new Date('09/25/2020 7:00 PM');
-		var end = new Date('09/27/2020 11:00 AM');
+		var start = new Date('04/16/2021 7:00 PM');
+		var end = new Date('04/18/2021 11:00 AM');
 		var _second = 1000;
 		var _minute = _second * 60;
 		var _hour = _minute * 60;
@@ -87,15 +100,19 @@
 			if (start - now > 0){
 				//&hellip
 				document.getElementById('start_stop_hacking').innerHTML = "Hacking starts in";
-			}else{
+			}
+			else if(now > start && now < end) {
 				document.getElementById('start_stop_hacking').innerHTML = "Hacking stops in";
+			}
+			else {
+				document.getElementById('start_stop_hacking').innerHTML = "";
 			}
 			
 
 			if (end-now < 0) {
 				var distance = end - now;
 				clearInterval(timer);
-				document.getElementById('countdown').innerHTML = "Stop hacking!";
+				document.getElementById('countdown').innerHTML = "Hacking is over!";
 				return;
 			}else if (start-now < 0){
 				var distance = end - now;
@@ -108,7 +125,7 @@
 			var minutes = ("0" + Math.floor((distance % _hour) / _minute)).slice(-2);
 			var seconds = ("0" + Math.floor((distance % _minute) / _second)).slice(-2);
 
-			document.getElementById('countdown').innerHTML = (days) ? days + ' days<br>' : '';
+			document.getElementById('countdown').innerHTML = (days) ? days + 'D ' : '';
 			document.getElementById('countdown').innerHTML += hours + ':';
 			document.getElementById('countdown').innerHTML += minutes + ':';
 			document.getElementById('countdown').innerHTML += seconds;
@@ -119,325 +136,188 @@
 </head>
 <body class="landing">
 
-<!-- Header -->
-<header id="header" class="alt"  style="height:100px;">
-	<div class="container">
-		<h1 id="logo"><img src="images/2020_logo.png" height = '70'></h1>
-		<nav id="nav">
-			<ul>
-				<li><a href="https://www.facebook.com/hashtag/ibrewed20"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.instagram.com/explore/tags/ibrewed20/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href="https://twitter.com/hashtag/ibrewed20"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
-
 <!-- Banner Splash -->
-<section id="banner">
-	<div class="content">
-		<div class="details">
-			<div class="column">
-				<header>
-					<h2>&nbsp;</h2>
-					<h2 id = "start_stop_hacking"></h2>
-					<div id="countdown" style="margin-bottom:20px;">&hellip;</div>
-					<h3>#ibrewed20</h3>
-					<div class="social-media">
-						<a href="https://www.facebook.com/hashtag/ibrewed20"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-						<a href="https://www.instagram.com/explore/tags/ibrewed20/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-						<a href="https://twitter.com/hashtag/ibrewed20"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-					</div>
-					<p><br>CISSA x MUHI Health Hackathon<br>25th September to 27th September 2020</p>
-				</header>
-			</div>
-			<div class="second-column">
-				<h2>&nbsp;</h2>
-				<h2>for the Front-Line &</h2><br\><h2 style="line-height: 5px;">for the Life-Line</h2>
-				<p class="info" style="padding-top:50px;">
-					As the COVID-19 continues to spread rapidly around the world, there has never been a greater need for medical technology. 
-					From providing wellbeing/mental health support, health tracking, preventative/hygiene behaviours to
-					contact tracing/contamination strategies, how can we leverage technology to provide solutions to these critical challenges?
-				<p><a href="https://codebrew.com.au/signup" target="_blank"class="button huge ">Sign-up now!</a></p>
-			</div>
+<div id="banner">
+	<div id="banner-content">
+		<img src="images/codebrew.png" height='100'><br/>
+		<h2>April 16th - 18th, 2021</h2>
+		<h3 id="start_stop_hacking"></h3>
+		<div style="margin-bottom:20px;">
+			<span id="countdown">&hellip;</span>
 		</div>
 	</div>
-</section>
+</div>
 
-<!-- Venue and Map -->
-<section id="venue" class="wrapper cta">
-	<div class="inner">
-		<header>
-			<h2>CISSA x MUHI Cobebrew 2020</h2>
-			<h3>for the Front-Line and Life-Line</h3>
-		</header>
-		<p>
-			This year we have seen the rapid adoption of medical technologies by the healthcare community 
-			as a result of the global impact of the ongoing COVID-19 pandemic, and we believe that the 
-			intersections between these two industries will only become more prevalent in the years to come.
-			It is time for university students to come together in teams to build, innovate and compete 
-			to make the best technological solutions to a pressing topic this year.
-			CISSA will be collaborating with MUHI to deliver the Codebrew Health Hackathon this 2020.
-			Show off your skills, solve real problems and compete for glory (and prizes!) at our annual Codebrew hackathon!
-			
-		</p>
-		<br><br>
+<section id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 about-col">
+				<h2 class="section-head">
+					Remote Education & Work<br/>Social Good<br/>Mental Health
+				</h2>
+			</div>
+			<div class="col-md-6 about-col">
+				<p>
+					Codebrew is CISSA’s annual flagship hackathon for students. The hackathon will take place over the weekend, 
+					where students will form teams of 4-5, to create a software project under a given theme. This involves coming 
+					up with an idea, writing the software, and pitching their product to a panel of judges 
+					(As Codebrew this year will be virtual, we will be doing video submissions).
+				</p>
+				<p>
+					With a theme of “preparing for the post COVID era”, participants are asked to brainstorm ideas under 3 different tracks : Remote work and education, 
+					Social good, and Mental Health. The goal of the hackathon is to develop the participants’ technical knowledge, and 
+					also try to come up with technological solutions to contemporary issues in this ever changing world.
+				</p>
+			</div>
+		</div>	
 	</div>
 </section>
 
-<!-- Schedule -->
-<section id="schedule" class="wrapper">
-	<div class="inner">
-		<header class="major">
-			<h2>Schedule</h2>
-		</header>
-		<ul class="actions small">
-			<li>
-				<a class="button" style="cursor: pointer;" id="friday" onclick='switchSchedule("friday")'>Friday 25th</a>
-			</li>
-			<li>
-				<a class="button" style="cursor: pointer;" id="saturday" onclick='switchSchedule("saturday")'>Saturday 26th</a>
-			</li>
-			<li>
-				<a class="button" style="cursor: pointer;" id="sunday" onclick='switchSchedule("sunday")'>Sunday 27th</a>
-			</li>
-		</ul>
-		<div class="table-wrapper">
-			<table id="eventschedule">
-				<tr>
-					<td> </td>
-					<td> </td>
-				</tr>
-			</table>
+<section id="prizes" class="container">
+	<h2 class="section-head">Prizes</h2>
+	<p>If you're feeling competitive, multiple prizes are up for grabs!</p>
+	<br/>
+	<div class="row">
+		<div class="col-md-3 category">
+			<i class="fas fa-trophy prize-icon"></i>
+			<h3>Winner of Each Track</h3>
+			<h4>$1,000 cash</h4>
 		</div>
-	</div>
-</section>
-
-<!-- Prizes -->
-<section id="prizes" class="wrapper cta">
-	<div class="inner">
-		<header>
-			<h2>Prizes</h2>
-			If you’re feeling competitive, multiple prizes are up for grabs!
-		</header>
-		<p>
-			<ul>
-				<li><b>1st Place:</b> $2000</li>
-				<li><b>2nd Place:</b> $1000</li>
-				<li><b>3rd Place:</b> $600</li>
-				<li><b>Best Tech (Sponsored by Clinic To Cloud):</b> $400</li>
-				<li><b>Best Idea (Sponsored by NIB):</b> $400</li>
-			</ul>
-			<ul>
-				<b>Prize Pool:</b>
-				<li>Switch Lite</li>
-				<li>Red Mi Fitness Watch x 5 </li>
-				<li>Amazon Echo</li>
-			</ul>
-	</div>
-</section>
-
-<section id="signup" class="wrapper">
-	<div class="inner">
-		<header class="major">
-			<h2>Sign-Ups and Video Submissions</h2>
-		</header>
-		<p>
-			Each individual participating in the hackathon must signup via
-			 <a href="https://codebrew.com.au/signup">eventbrite</a>. You are welcome to organise a team before the event, 
-			 but if you don't have a team, don't worry! You can still signup and form/join teams on our 
-			<a target="_blank" href="https://codebrew-2020.slack.com/join/shared_invite/zt-gmexg9xj-u93186STVCO2Hk0e32kUVA#/">slack channel</a>. 
-			Once you have finalised your team, fill out this <a href="https://forms.gle/dbhRs5jWAYAjr8MAA">form</a>. Only <b>one</b> person per team needs
-			to fill this out.
-		</p>
-		<p>
-			All submissions must be a recorded video presentation of <b>maximum 5 minutes</b>. More details will be provided soon.
-		</p>
+	
+		<div class="col-md-3 col-md-offset-1 category">
+			<i class="far fa-lightbulb prize-icon"></i>
+			<h3>Most Innovative Idea</h3>
+			<h4>$200 cash</h4>
+		</div>
+	
+		<div class="col-md-3 col-md-offset-1 category">
+			<i class="fas fa-memory prize-icon"></i>
+			<h3>Best Technology</h3>
+			<h4>$200 cash</h4>
+		</div>
 	</div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="wrapper">
-	<div class="inner">
-		<ul class="features">
-			<li><h2>Frequently Asked Questions</h2></li>
-			<li>
+<section id="faq">
+	<div class="container">
+		<h2 class="section-head">Frequently Asked Questions</h2>
+		<div class="row">
+			<div class="col-sm-3 ">
 				<h3>What is Codebrew?</h3>
 				<p>
-					Codebrew is an annual hackathon run by students, for students. Form teams of 4 to 6 and
-					hack together a prototype based on a theme over the course of 27 hours.
-				</p>
-			</li>
-			<li>
+					Codebrew is an annual hackathon run by students, for students. Form teams of 4 to 6 and hack together a prototype based on a theme over the course of 27 hours.
+				</p>		
+			</div>
+			<div class="col-sm-3 col-sm-offset-1">
 				<h3>Who can attend?</h3>
 				<p>
 					Any university student can attend Codebrew!
 				</p>
-			</li>
-			<li>
+			</div>
+			<div class="col-sm-3 col-sm-offset-1">
 				<h3>When is it?</h3>
 				<p>
-					Codebrew will be held from the 25TH (Friday) to the 27th (Sunday) of September.
-					The 'hack' will commence from Friday evening to Sunday morning.
+					Codebrew will be held from the 16th (Friday) to the 18th (Sunday) of April.
 				</p>
-			</li>
-			<li>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<h3>What is the theme?</h3>
+				<p>
+					Relevant to the recent COVID-19 pandemic, this year's theme will be on remote work & education, social good, and mental health!
+				</p>
+			</div>
+			<div class="col-sm-3 col-sm-offset-1">
+				<h3>What is the team size?</h3>
+				<p>
+					4-6 people per team.
+				</p>
+			</div>
+			<div class="col-sm-3 col-sm-offset-1"> 
+				<h3>How much is a ticket?</h3>
+				<p>
+					$15 per head.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
 				<h3>Why should I go?</h3>
 				<p>
 					Meet like-minded students, network with industry leaders,
 					give yourself an edge when applying for internships and grad jobs,
 					win prizes and make a difference!
 				</p>
-			</li>
-			<li>
-				<h3>What is the theme?</h3>
-				<p>
-					The theme this year is related to medical technology. Specific topics will be released at a later date! 
-				</p>
-			</li>
-			<li>
-				<h3>What is the team size?</h3>
-				<p>
-					4-6 people per team.
-				</p>
-			</li>
-			<li>
-				<h3>Do I need a team to signup?</h3>
-				<p>
-					Not at all! You can still signup and form/join teams on our <a target="_blank" href="https://codebrew-2020.slack.com/join/shared_invite/zt-gmexg9xj-u93186STVCO2Hk0e32kUVA#/">slack channel</a> later. Checkout the
-					<a href="#signup">signup & submission section for more details</a>
-				</p>
-			</li>
-			<li>
+			</div>
+			<div class="col-sm-3 col-sm-offset-1"> 
 				<h3>Who runs Codebrew?</h3>
 				<p>
-					This year's Codebrew hackathon is run by <a href="https://cissa.org.au" target="_blank">CISSA</a>
-					and <a href="https://muhi.org.au" target="_blank">MUHI</a> - with the support of our generous 
-					<a href="#footer">sponsors</a>. CISSA is the Computing and Information Systems Students Association 
-					at the University of Melbourne. MUHI is the Melbourne University Health Initiative.
+					Codebrew is run by <a href="https://cissa.org.au" target="_blank">CISSA</a>, the premier computing club at the University of Melbourne.
 					<br><br>
 				</p>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</div>
 </section>
 
-<section id="contact" class="wrapper cta">
-	<div class="inner">
-		<header>
-			<h2>Contact Us</h2>
-		</header>
-		<div>
-			Any further questions? You can reach out to us at <a href="mailto:hackathon@muhi.org.au">hackathon@muhi.org.au</a>
-			You can connect with us on our social media pages:
-			<a href="https://www.cissa.org.au" target="_blank"><h3  style="margin-top:10px;">CISSA:</h3></a>
-			<div class="social-media" style="margin:10px;">
-				<a href="https://www.facebook.com/cissa.unimelb/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-				<a href="https://www.instagram.com/cissa_unimelb/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-				<a href="https://www.linkedin.com/company/cissa-computing-and-information-systems-students-association-/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-				<a href="https://twitter.com/cissa_unimelb/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+<!-- Sponsors -->
+<!-- <section id="sponsors">
+	<div class="container">
+		<h2 class="section-head">CISSA Sponsors</h2>
 
-			</div>
-			<a href="https://www.muhi.org.au" target="_blank"><h3  style="margin-top:10px;">MUHI:</h3></a>
-			<div class="social-media" style="margin:10px;">
-				<a href="https://www.facebook.com/MUHealthInitiative/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-				<a href="https://www.instagram.com/muhi.au/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-				<a href="https://www.linkedin.com/company/melbourne-university-health-initiative-muhi" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+		<h3>PLATINUM</h3>
+		<hr style="border-top:3px solid #b2d6ec; border-radius: 3px">
+		<div class="row my-5">
+			<img class="col-md-auto" src="images/sponsors/microsoft.png" height="60"/>
+			<img class="col-md-auto col-md-offset-1" src="images/sponsors/janestreet.png" height="60"/>
+			<img class="col-md-auto col-md-offset-1" src="images/sponsors/imc.png" height="40"/>
+			<img class="col-md-auto col-md-offset-1" src="images/sponsors/canva.png" height="60"/>
+			<img class="col-md-auto col-md-offset-1" src="images/sponsors/optiver.png" height="40"/>
+			<img class="col-md-auto col-md-offset-1" src="images/sponsors/commbank.png" height="70"/>
+		</div>
+
+		<h3>GOLD</h3>
+		<hr style="border-top:3px solid #ffd700; border-radius: 3px">
+		<div class="row my-5">
+			<img class="col-md-auto" src="images/sponsors/mcgrathnicol.png" height="70">
+			<img class="col-md-auto col-md-offset-1" src="images/sponsors/esri.png" height="60">
+			<img class="col-md-auto col-md-offset-1" src="images/sponsors/rea.png" height="50">
+		</div>
+
+		<h3>SILVER</h3>
+		<hr style="border-top:3px solid #b5b5b5; border-radius: 3px">
+		<div class="row my-5">
+			<img class="col-md-auto" src="images/sponsors/akuna.png" height="60">
+			<img class="col-md-auto col-md-offset-1" src="images/sponsors/google.png" height="60">
+			<img class="col-md-auto col-md-offset-1" src="images/sponsors/sig.png" height="60">
+		</div>
+	</div>
+</section> -->
+
+<section id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a href="https://www.facebook.com/cissa.unimelb/" class="fab fa-facebook-f social" target="_blank"></a>
+				<a href="https://www.instagram.com/cissa_unimelb/" class="fab fa-instagram social" target="_blank"></a>
+				<a href="https://www.linkedin.com/company/cissa-computing-and-information-systems-students-association-/" class="fab fa-linkedin social" target="_blank"></a>
+				<a href="https://twitter.com/cissa_unimelb/" class="fab fa-twitter social" target="_blank"></a>					
 			</div>
 		</div>
 
+		<div class="row" id="copyright">
+			<div class="col">
+				Copyright &copy; 2021 CISSA					
+			</div>
+		</div>
 	</div>
 </section>
 
-
-<!-- Footer -->
-<footer id="footer">
-	<div class="content">
-		<div class="inner">
-			<header class="major">
-				<h2 class="sponsorcat">CISSA SPONSORS</h2>
-			</header>
-
-			<section class="about">
-				<h3>DIAMOND</h3>
-				<ul class="actions">
-					<li><img src="images/sponsors/microsoft.png" height="30" style="transform:translateY(10px);"></li>
-					<li><img src="images/sponsors/anz.png" height="40"></li>
-				</ul>
-			</section>
-			<section class="about">
-				<h3>PLATINUM</h3>
-				<ul class="actions">
-					<li><img src="images/sponsors/janestreet.png" height="35" style="transform:translateY(10px);"></li>
-					<li></li>
-				</ul>
-				</ul>
-			</section>
-
-			<section class="about">
-				<h3>GOLD</h3>
-				<ul class="actions">
-					<li><img src="images/sponsors/rome2rio_white.png" height="50"></li>
-					<li><img src="images/sponsors/canva.png" height="60" style="transform:translateY(-20px);"></li>
-					<li><img src="images/sponsors/imc.png" height="25" style="transform:translateY(-20px);"></li>
-					<li><img src="images/sponsors/telstra.PNG" height="60" style="transform:translateY(-20px);"></li>
-				</ul>
-			</section>
-
-			<section class="about" id="translate" style="transform:translateY(40px);">
-				<ul class="actions">
-					<li><img src="images/sponsors/atlassian.png" height="55"></li>
-					<li><img src="images/sponsors/akuna.png" height="35"></li>
-					<li><img src="images/sponsors/optiver.png" height="30"></li>
-					<li><img src="images/sponsors/deloitte_white.png" height="25"></li>
-				</ul>
-			</section>
-
-			<section class="about">
-				<h3>Silver</h3>
-				<ul class="actions">
-					<li><img src="images/sponsors/ey.png" height="70" style="transform:translateX(20px);"></li>
-					<li><img src="images/sponsors/mcgrath_white.png" height="60" style="transform:translateY(10px);"></li>
-					<li><img src="images/sponsors/facebook_white.png" height="100" style="transform:translateX(-20px);"></li>
-				</ul>
-			</section>
-			<section class="about">
-				<h3>Bronze</h3>
-				<ul class="actions">
-					<li><img src="images/sponsors/commbank_white.png" height="55" ></li>
-					<li><img src="images/sponsors/accenture_white.png" height="40" ></li>
-				</ul>
-			</section>
-		</div>
-
-		<div class="inner">
-			<header class="major">
-				<h2 class="sponsorcat">MUHI CODEBREW SPONSORS</h2>
-			</header>
-
-			<section class="about">
-				<ul class="actions">
-					<li><img src="images/sponsors/muhi/nib.png" height="50"></li>
-					<li><img src="images/sponsors/muhi/clinictocloud.png" height="75"></li>
-					<li><img src="images/sponsors/muhi/sanofi.png" height="75"></li>
-
-				</ul>
-			</section>
-		</div>
-
-		<p style="text-align: center"><a href="https://cissa.org.au">CISSA</a> x <a href="https://muhi.org.au">MUHI</a> &#169;&nbsp;2020
-	</div>
-</footer>
 
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="assets/js/main.js"></script>
-<script>
+<!-- <script>
 	var friday = [
 		["5:30 pm", "KeyNote & Lucky draw #1"],
 		["6:30 pm", "Event logistics briefing"],
@@ -518,7 +398,7 @@
 	// call the method on load
 	switchIframeSrc();
 	switchSchedule("friday");
-</script>
+</script> -->
 
 </body>
 </html>
