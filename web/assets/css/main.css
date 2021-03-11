@@ -113,9 +113,13 @@ body {
   position: relative;
 }
 
-.logo {
+.logo-container {
   margin-top: 10%;
   text-align: right;
+}
+
+#logo {
+  height: calc(2vw + 100px);
 }
 
 #banner-content {
@@ -154,8 +158,8 @@ body {
   border-radius: 7px;
   line-height: 48px;
   vertical-align: top;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
   font-size: calc(32px + 0.5vw);
   color: white;
 }
