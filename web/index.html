@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 	
@@ -97,18 +97,6 @@
 		function showRemaining() {
 			var now = new Date();
 
-			if (start - now > 0){
-				//&hellip
-				document.getElementById('start_stop_hacking').innerHTML = "Hacking starts in";
-			}
-			else if(now > start && now < end) {
-				document.getElementById('start_stop_hacking').innerHTML = "Hacking stops in";
-			}
-			else {
-				document.getElementById('start_stop_hacking').innerHTML = "";
-			}
-			
-
 			if (end-now < 0) {
 				var distance = end - now;
 				clearInterval(timer);
@@ -131,20 +119,37 @@
 			document.getElementById('countdown').innerHTML += seconds;
 		}
 
-		timer = setInterval(showRemaining, 1000);
+		timer = setInterval(showRemaining, 50);
 	</script>
 </head>
 <body class="landing">
 
 <!-- Banner Splash -->
 <div id="banner">
-	<div id="banner-content">
-		<img src="images/codebrew.png" height='100'><br/>
-		<h2>April 16th - 18th, 2021</h2>
-		<h3 id="start_stop_hacking"></h3>
-		<div style="margin-bottom:20px;">
-			<span id="countdown">&hellip;</span>
+	<div class="container">
+		<div class="row logo">
+			<img src="images/codebrew.png" height='125'/>
 		</div>
+		<div class="row">
+			<div class="col-md-6 about-col">
+			</div>
+			<div class="col-md-6 banner-content">
+				<div id="banner-text">
+					<h2>April 16th - 18th, 2021</h2>
+					<div style="margin-bottom:20px;">
+						<span id="countdown">&hellip;</span>
+					</div>	
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="event-socials-container">
+		<div class="event-socials">
+			<span id="hashtag">#ibrewed2021</span><br/>
+			<a href="https://www.facebook.com/hashtag/ibrewed2021" class="fab fa-facebook-f event-social" target="_blank"></a>
+			<a href="https://www.instagram.com/explore/tags/ibrewed2021/" class="fab fa-instagram event-social" target="_blank"></a>
+			<a href="https://twitter.com/hashtag/ibrewed2021" class="fab fa-twitter event-social" target="_blank"></a>
+		</div>		
 	</div>
 </div>
 
@@ -158,42 +163,39 @@
 			</div>
 			<div class="col-md-6 about-col">
 				<p>
-					Codebrew is CISSA’s annual flagship hackathon for students. The hackathon will take place over the weekend, 
-					where students will form teams of 4-5, to create a software project under a given theme. This involves coming 
-					up with an idea, writing the software, and pitching their product to a panel of judges 
-					(As Codebrew this year will be virtual, we will be doing video submissions).
-				</p>
-				<p>
-					With a theme of “preparing for the post COVID era”, participants are asked to brainstorm ideas under 3 different tracks : Remote work and education, 
-					Social good, and Mental Health. The goal of the hackathon is to develop the participants’ technical knowledge, and 
-					also try to come up with technological solutions to contemporary issues in this ever changing world.
+					This year's theme is preparing for the post COVID era. Participants are asked to brainstorm ideas under 3 different tracks: Remote work and education, 
+					Social good, and Mental Health. A maximum of 10 teams can work with each track on a first-come, first-serve basis.
+					The goal of the hackathon is to develop the participants’ technical knowledge and 
+					try to come up with technological solutions to contemporary issues in this ever changing world.
 				</p>
 			</div>
 		</div>	
 	</div>
 </section>
 
-<section id="prizes" class="container">
-	<h2 class="section-head">Prizes</h2>
-	<p>If you're feeling competitive, multiple prizes are up for grabs!</p>
-	<br/>
-	<div class="row">
-		<div class="col-md-3 category">
-			<i class="fas fa-trophy prize-icon"></i>
-			<h3>Winner of Each Track</h3>
-			<h4>$1,000 cash</h4>
-		</div>
-	
-		<div class="col-md-3 col-md-offset-1 category">
-			<i class="far fa-lightbulb prize-icon"></i>
-			<h3>Most Innovative Idea</h3>
-			<h4>$200 cash</h4>
-		</div>
-	
-		<div class="col-md-3 col-md-offset-1 category">
-			<i class="fas fa-memory prize-icon"></i>
-			<h3>Best Technology</h3>
-			<h4>$200 cash</h4>
+<section id="prizes">
+	<div class="container">
+		<h2 class="section-head">PRIZES</h2>
+		<p>Feeling competitive? Multiple prizes are up for grabs!</p>
+		<br/>
+		<div class="row">
+			<div class="col-md-3 category">
+				<i class="fas fa-trophy prize-icon"></i>
+				<h3>Track Winner</h3>
+				<h4>$1,000 cash</h4>
+			</div>
+		
+			<div class="col-md-3 col-md-offset-1 category">
+				<i class="far fa-lightbulb prize-icon"></i>
+				<h3>Most Innovative Idea</h3>
+				<h4>$200 cash</h4>
+			</div>
+		
+			<div class="col-md-3 col-md-offset-1 category">
+				<i class="fas fa-sim-card prize-icon"></i>
+				<h3>Best Technology</h3>
+				<h4>$200 cash</h4>
+			</div>
 		</div>
 	</div>
 </section>
@@ -201,22 +203,22 @@
 <!-- FAQ -->
 <section id="faq">
 	<div class="container">
-		<h2 class="section-head">Frequently Asked Questions</h2>
+		<h2 class="section-head">FREQUENTLY ASKED QUESTIONS</h2>
 		<div class="row">
 			<div class="col-sm-3 ">
-				<h3>What is Codebrew?</h3>
+				<h3 class="question-title">What is Codebrew?</h3>
 				<p>
-					Codebrew is an annual hackathon run by students, for students. Form teams of 4 to 6 and hack together a prototype based on a theme over the course of 27 hours.
+					Codebrew is an annual hackathon run by students, for students. Hack together a prototype based on a theme over the course of 27 hours.
 				</p>		
 			</div>
 			<div class="col-sm-3 col-sm-offset-1">
-				<h3>Who can attend?</h3>
+				<h3 class="question-title">Who can attend?</h3>
 				<p>
 					Any university student can attend Codebrew!
 				</p>
 			</div>
 			<div class="col-sm-3 col-sm-offset-1">
-				<h3>When is it?</h3>
+				<h3 class="question-title">When is it?</h3>
 				<p>
 					Codebrew will be held from the 16th (Friday) to the 18th (Sunday) of April.
 				</p>
@@ -224,19 +226,19 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-3">
-				<h3>What is the theme?</h3>
+				<h3 class="question-title">What is the theme?</h3>
 				<p>
-					Relevant to the recent COVID-19 pandemic, this year's theme will be on remote work & education, social good, and mental health!
+					This year's theme will be on preparing for the post-COVID era!
 				</p>
 			</div>
 			<div class="col-sm-3 col-sm-offset-1">
-				<h3>What is the team size?</h3>
+				<h3 class="question-title">What is the team size?</h3>
 				<p>
-					4-6 people per team.
+					4-5 people per team.
 				</p>
 			</div>
 			<div class="col-sm-3 col-sm-offset-1"> 
-				<h3>How much is a ticket?</h3>
+				<h3 class="question-title">How much is a ticket?</h3>
 				<p>
 					$15 per head.
 				</p>
@@ -244,7 +246,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-3">
-				<h3>Why should I go?</h3>
+				<h3 class="question-title">Why should I go?</h3>
 				<p>
 					Meet like-minded students, network with industry leaders,
 					give yourself an edge when applying for internships and grad jobs,
@@ -252,7 +254,7 @@
 				</p>
 			</div>
 			<div class="col-sm-3 col-sm-offset-1"> 
-				<h3>Who runs Codebrew?</h3>
+				<h3 class="question-title">Who runs Codebrew?</h3>
 				<p>
 					Codebrew is run by <a href="https://cissa.org.au" target="_blank">CISSA</a>, the premier computing club at the University of Melbourne.
 					<br><br>
@@ -304,6 +306,7 @@
 				<a href="https://www.instagram.com/cissa_unimelb/" class="fab fa-instagram social" target="_blank"></a>
 				<a href="https://www.linkedin.com/company/cissa-computing-and-information-systems-students-association-/" class="fab fa-linkedin social" target="_blank"></a>
 				<a href="https://twitter.com/cissa_unimelb/" class="fab fa-twitter social" target="_blank"></a>					
+				<a href="https://discord.gg/JZXcbQf5" class="fab fa-discord social" target="_blank"></a>
 			</div>
 		</div>
 
