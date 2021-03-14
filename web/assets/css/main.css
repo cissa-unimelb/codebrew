@@ -111,7 +111,7 @@ button > a:hover {
 
 /* Banner */
 #banner {
-  background-image: url('../../images/banner.png');
+  background-image: url('../../images/alt-banner.png');
   background-position: center;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -147,13 +147,29 @@ button > a:hover {
   color: white;
 }
 
-#signup {
+#ticket {
   margin-top: 3%;
   padding: 10px 20px 10px 20px;
   background: #7C1DC9;
   border: 2px solid #7C1DC9;
   box-sizing: border-box;
   border-radius: 100px;
+  transition: all 0.3s ease 0s;
+}
+
+#ticket:hover {
+  box-shadow: -3px 7px #bc96ba;
+  transform: translate(3px, -5px) ;
+}
+
+#signup {
+  margin-top: 3%;
+  margin-left: 3%;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background-color: inherit;
   transition: all 0.3s ease 0s;
 }
 
@@ -263,9 +279,36 @@ button > a:hover {
   height: 10em;
 }
 
+/* Schedule */
+#schedule {
+  height: 60vh;
+}
+
+#schedule-wrapper {
+  margin-top: 3%;
+}
+
+#eventschedule {
+  margin-top: 3%;
+}
+
+.schedule-day {
+  border: 1px solid rgb(73, 73, 73);
+  background-color: white;
+  min-width: 10vw;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.schedule-day.disabled {
+  background-color: #110836d9;
+  color: white;
+  border: 1px solid rgb(73, 73, 73);
+}
+
 /* Prizes */
 #prizes {
-  background-color: #585481;
+  background-color: #3c3676;
   color: white;
 }
 
@@ -289,11 +332,26 @@ button > a:hover {
 }
 
 .prize-icon.fa-lightbulb {
-  color:rgb(157, 157, 157);
+  color:rgb(252, 208, 208);
 }
 
 .prize-icon.fa-sim-card {
   color:rgb(255, 7, 193);
+}
+
+/* Eligibility */
+
+#eligibility {
+  background-color: #2c0056;
+  color: white;
+}
+
+#eligibility-list {
+  margin-top: 3%;
+}
+
+.list-item {
+  padding-top: 0.5%;
 }
 
 /* FAQ */

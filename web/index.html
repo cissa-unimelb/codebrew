@@ -84,7 +84,7 @@
 	<meta name="msapplication-TileImage" content="mstile-144x144.png">
 	<meta name="msapplication-config" content="browserconfig.xml">
 	<link rel="yandex-tableau-widget" href="yandex-browser-manifest.json">
-	<script>
+	<!-- <script>
 
 		var start = new Date('04/16/2021 7:00 PM');
 		var end = new Date('04/18/2021 11:00 AM');
@@ -120,7 +120,7 @@
 		}
 
 		timer = setInterval(showRemaining, 50);
-	</script>
+	</script> -->
 </head>
 <body class="landing">
 
@@ -132,7 +132,7 @@
 			A POST-COVID WORLD
 		</div>
 		<div id="banner-text">
-			<h3>16 April 2021 - 18 April 2021</h3>
+			<h3>16 April 2021 - 19 April 2021</h3>
 			<div id="banner-description">
 				<!-- <span id="countdown">&hellip;</span> -->
 				<h2>CISSA's annual flagship hackathon for students.</h2>
@@ -140,9 +140,15 @@
 			</div>
 
 			<div class="banner-buttons">
+				<button id="ticket">
+					<a href="./index.html">
+						Buy a Ticket
+					</a>
+				</button>
+
 				<button id="signup">
 					<a href="./index.html">
-						SIGN-UP (TBC)
+						Team Sign Up
 					</a>
 				</button>
 			</div>
@@ -164,14 +170,14 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h1>
-					About 2021
+					About
 				</h1>
 			</div>
 			<div class="col-md-6">
 				<p>
 					Codebrew welcomes all students regardless of skill level to work through an exhilarating and rewarding 
-					36 hours in a team environment, to experience the joy of coming up with innovative ideas and turning them 
-					into reality. 
+					36 hours in a team environment, to experience the joy of coming up with innovative ideas 
+					and turning them into reality. 
 				</p>
 				<p>
 					With the goal of our hackathon being to develop the participants’ technical knowledge, we will also be 
@@ -208,6 +214,19 @@
 <section id="schedule">
 	<div class="container">
 		<h1>Schedule</h1>
+		<div id="schedule-wrapper">
+			<button class="schedule-day" id="thursday" onclick='switchSchedule("thursday")'>Thursday 15th</button>
+			<button class="schedule-day" id="friday" onclick='switchSchedule("friday")'>Friday 16th</button>
+			<button class="schedule-day" id="saturday" onclick='switchSchedule("saturday")'>Saturday 17th</button>
+			<button class="schedule-day" id="sunday" onclick='switchSchedule("sunday")'>Sunday 18th</button>
+			<button class="schedule-day" id="monday" onclick='switchSchedule("monday")'>Monday 19th</button>
+			<table id="eventschedule" class="table table-striped table-bordered">
+				<tr>
+					<th scope="row"></th>
+					<td></td>
+				</tr>
+			</table>
+		</div>
 	</div>
 </section>
 
@@ -238,6 +257,25 @@
 	</div>
 </section>
 
+<section id="eligibility">
+	<div class="container">
+		<h1>Eligibility</h1>
+		<ul id="eligibility-list">
+			<li class="list-item">Each individual participating in Codebrew 2021 must purchase a ticket via EVENTBRITE-LINK.</li>
+			<hr/>
+			<li class="list-item">You are welcome to organise a team before the event, but if you don't have a team, don't worry! 
+				You can purchase the ticket as an individual and form/join teams on our DISCORD-CHANNEL-LINK. 
+				Once you have finalised your team, fill out TEAM-FORM-LINK. Only one person per team needs to fill 
+				this out.</li>
+			<hr/>
+			<li class="list-item">Teams must comprise of 4-5 people. Teams with less than the required number will be asked to merge. 
+				Codebrew organisers reserve the right to relax this restriction at our discretion.</li>
+			<hr/>
+			<li class="list-item">All current university students are welcome to compete!</li>
+		</ul>
+	</div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
 	<div class="container">
@@ -258,7 +296,7 @@
 			<div class="col-sm-3 col-sm-offset-1">
 				<h3 class="question-title">When is it?</h3>
 				<p>
-					Codebrew will be held from the 16th (Friday) to the 18th (Sunday) of April.
+					Codebrew will be held from the 16th (Friday) to the 19th (Monday) of April.
 				</p>
 			</div>
 		</div>
@@ -350,7 +388,7 @@
 
 		<div class="row" id="copyright">
 			<div class="col">
-				Copyright &copy; 2021 CISSA					
+				Copyright &copy; 2021 <a href="https://cissa.org.au" target="_blank" style="color: rgba(255, 255, 255, 0.66); text-decoration: underline;">CISSA</a>					
 			</div>
 		</div>
 	</div>
@@ -358,33 +396,28 @@
 
 
 <!-- Scripts -->
-<!-- <script>
+<script>
+	var thursday = [
+		["3:00 pm", "CarePack pick-up"],
+	];
+
 	var friday = [
-		["5:30 pm", "KeyNote & Lucky draw #1"],
-		["6:30 pm", "Event logistics briefing"],
-		["7:00 pm", "Teammate seeking session, or START HACKING!"],
+		["6:00 pm", "Opening Ceremony"],
+		["7:00 pm", "START HACKING!"],
 	];
 
 	var saturday = [
-		["All day", "HACKING"],
-		["1:00 am", "Lucky Draw #2"],
-		["10:00 am", "Mentor: Daniel Sutherland, from Canva"],
-		["11:00 am", "Mentor: Simon Falzon & Fernando Rosendo, from Clinic to Cloud"],
-		["12:00 pm", "Mentor: Oliver Lade, from ANZ"],
-		["12:00 pm", "Lucky Draw #3"],
-		["1:00 pm", "Mentor: Enno Davids, from ANZ"],
-		["3:00 pm", "Mentor: Tina Yu, from Atlassian"],
-		["4:00 pm", "Mentor: Professor Karin Verspoor, from Unimelb School of Computing and Information Systems"],
-		["6:00 pm", "Lucky draw #4"],
+		["All day", "HACKING"]
 	];
 
 	var sunday = [
-		["1:00 am", "Lucky Draw #5"],
-		["11:00 am", "STOP HACKING + Video Submissions Due!"],
-		["1:00 pm", "Top 5 Finalists Announced"],
-		["2:00 pm", "Live Pitching and Judging & Lucky Draw #6"],
-		["4:00 pm", "Final Results Announced"],
-		["5:30 pm", "Wrap-Up!"]
+		["6:00 pm", "STOP HACKING! Submit your video!"]
+	];
+
+	var monday = [
+		["9:00 am", "Top 2 of each track announced"],
+		["6:00 pm", "Live pitching & judging"],
+		["8:00 pm", "Winners announced!"]
 	];
 
 	// Map switcher
@@ -403,24 +436,12 @@
 	// function to load new schedule table
 	function switchSchedule(day) {
 		// Grey out the button pressed, un-grey out the others. I know, I'm lazy.
-		document.getElementById(day).classList.add("disabled");
-		switch(day) {
-			case "friday":
-				document.getElementById("saturday").classList.remove("disabled");
-				document.getElementById("sunday").classList.remove("disabled");
-				break;
-			case "saturday":
-				document.getElementById("friday").classList.remove("disabled");
-				document.getElementById("sunday").classList.remove("disabled");
-				break;
-			case "sunday":
-				document.getElementById("saturday").classList.remove("disabled");
-				document.getElementById("friday").classList.remove("disabled");
-				break;
-			default:
-				console.log("invalid day");
-				break;
+		var elems = document.getElementsByClassName('schedule-day');
+		for(var i = 0; i < elems.length; i++) {
+			elems[i].classList.remove("disabled");
 		}
+		document.getElementById(day).classList.add("disabled");
+
 		// Get the nested list schedule, erase existing list and replace with new one.
 		day = eval(day);
 		var table = document.getElementById('eventschedule');
@@ -439,7 +460,7 @@
 	// call the method on load
 	switchIframeSrc();
 	switchSchedule("friday");
-</script> -->
+</script>
 
 </body>
 </html>
