@@ -226,7 +226,7 @@ button > a:hover {
 
 @media only screen and (max-width: 800px) {
   #banner {
-    background-image: url('../../images/banner.png');
+    background-image: url('../../images/alt-banner.png');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -267,11 +267,8 @@ button > a:hover {
   color: white;
 }
 
-.track-row {
-  margin-top: 3%
-}
-
 .track-section {
+  padding-top: 5%;
   text-align: center;
 }
 
