@@ -11,13 +11,13 @@
 	License: pixelarity.com/license
 */
 /* Reset */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 18px;
   vertical-align: baseline;
-
   font-family: "Open Sans";
 }
 
@@ -86,8 +86,8 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 
 /* Generic stuff */
 body {
-  background-color: #fff;
-  color: #5e6875;
+  color: #fff;
+  background-color: #5e6875;
 }
 
 section {
@@ -278,6 +278,8 @@ button > a:hover {
 
 /* Schedule */
 #schedule {
+  background-color:rgba(0, 0, 0, 0.878);
+  color: rgba(255, 255, 255, 0.776);
   height: 60vh;
 }
 
@@ -290,16 +292,23 @@ button > a:hover {
 }
 
 .schedule-day {
-  border: 1px solid rgb(73, 73, 73);
-  background-color: white;
+  border: 1px solid rgb(156, 156, 156);
+  background-color: inherit;
+  color: inherit;
   min-width: 10vw;
   padding: 5px;
   border-radius: 3px;
+  transition: all 0.3s ease 0s;
+}
+
+.schedule-day:hover {
+  background-color: #645d7dd9;
+  color: inherit;
 }
 
 .schedule-day.disabled {
-  background-color: #110836d9;
-  color: white;
+  background-color: #6a52cbd9;
+  color: inherit;
   border: 1px solid rgb(73, 73, 73);
 }
 
@@ -353,7 +362,8 @@ button > a:hover {
 
 /* FAQ */
 #faq {
-  background-color: white;
+  background-color:rgba(0, 0, 0, 0.878);
+  color: rgba(255, 255, 255, 0.776);
 }
 
 /* Sponsors */
