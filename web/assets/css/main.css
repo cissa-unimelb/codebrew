@@ -169,7 +169,7 @@ button > a:hover {
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 100px;
-  background-color: inherit;
+  background-color: #250555;
   transition: all 0.3s ease 0s;
 }
 
@@ -376,6 +376,10 @@ button > a:hover {
 .sponsor-tier {
   font-weight: bold;
   margin-top: 5%;
+}
+
+.sponsor-img {
+  padding-top: 1%;
 }
 
 /* Footer */
