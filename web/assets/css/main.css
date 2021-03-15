@@ -369,6 +369,13 @@ button > a:hover {
 /* Sponsors */
 #sponsors {
   width: 100%;
+  background-color:rgba(0, 0, 0, 0.878);
+  color: rgba(255, 255, 255, 0.776);
+}
+
+.sponsor-tier {
+  font-weight: bold;
+  margin-top: 5%;
 }
 
 /* Footer */
