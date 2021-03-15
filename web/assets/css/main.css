@@ -315,6 +315,10 @@ button > a:hover {
   color: inherit;
 }
 
+th {
+  font-weight: bold !important;
+}
+
 .schedule-day.disabled {
   background-color: #6a52cbd9;
   color: inherit;
