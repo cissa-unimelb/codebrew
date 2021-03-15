@@ -289,7 +289,7 @@ button > a:hover {
 #schedule {
   background-color:rgba(0, 0, 0, 0.878);
   color: rgba(255, 255, 255, 0.776);
-  height: 60vh;
+  min-height: 60vh;
 }
 
 #schedule-wrapper {
