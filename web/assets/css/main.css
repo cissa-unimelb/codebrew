@@ -283,10 +283,10 @@ button > a:hover {
 }
 
 .track-section:hover {
-  background-color: #413181;
+  background-color: #594a93;
 }
 .track-description-selected {
-  background-color: #594a93;
+  background-color: #413181;
 }
 
 #track-description {
