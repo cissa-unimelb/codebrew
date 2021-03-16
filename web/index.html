@@ -195,18 +195,20 @@
 		<h1>The Tracks</h1>
 		<p>This year, participants will brainstorm ideas under 3 different tracks for the given theme.</p>
 		<div class="row">
-			<div class="col-md-4 track-section">
+			<div class="col-md-4 track-section" id="remote" onclick="showDescription('remote')">
 				<img src="./images/remote_work.png" class="track-image"/>
 				<h3>Remote Education & Work</h3>
 			</div>
-			<div class="col-md-4 track-section">
+			<div class="col-md-4 track-section" id="social" onclick="showDescription('social')">
 				<img src="./images/social_good.png" class="track-image"/>
 				<h3>Social Good</h3>
 			</div>
-			<div class="col-md-4 track-section">
+			<div class="col-md-4 track-section" id="health" onclick="showDescription('health')">
 				<img src="./images/mental_health.png" class="track-image"/>
 				<h3>Public Health</h3>
 			</div>
+		</div>
+		<div class="row" id="track-description">
 		</div>
 	</div>
 </section>
@@ -419,6 +421,48 @@
 
 <!-- Scripts -->
 <script>
+	var track_descriptions = {
+		"remote" : `Remote work and education has become the norm over the past year. There is no doubt that these experiences will 
+					continue to change in the future for the better. This track is everything related to working, learning, and 
+					operating remotely. Hackers are encouraged to brainstorm ideas on how to keep online classes engaging, how 
+					to overlook the physical distance and re-create or mimic in-person social interactions, how to facilitate 
+					collaboration between teams and how to boost productivity while allowing interhuman connections to thrive.`,
+		"social" : `The pandemic has seen a spike in divisiveness across race, gender, class and many other facets of humanity. 
+					Amidst these unprecedented times, the role of technology in pushing for change in the social good sphere is more 
+					crucial than ever before. This track is all about utilising technology to preserve and propel the goodness in 
+					society. Hackers are urged to formulate an altruistic response to protect sustainability initiatives, diversity 
+					and inclusion, and make a significant contribution to communities at risk.`,
+		"health" : `<i>“Whoever wishes to foresee the future must consult the past.”</i> Reimagining the future of public health in the aftermath 
+					of a pandemic is an integral step in an era shaped by it. COVID-19 casts a spotlight on those already subject to unacceptable 
+					health inequalities and the vast economic impacts that inevitably come into fruition. Upon being reminded of the value and 
+					necessity of public health, this track prompts for technology to be employed in formulating a response to challenges in 
+					reinvention of the public health system.`
+	};
+
+	var selected = null;
+	function _showDescription(key) {
+		for(var track in track_descriptions) {
+			$('#'+track).removeClass('track-description-selected');
+		}
+		$("#track-description").html(track_descriptions[key]);
+		$("#"+key).addClass('track-description-selected');
+	}
+	function showDescription(key) {
+		selected = key;
+		_showDescription(key);
+	}
+
+	var all_keys = Object.keys(track_descriptions);
+	var i = 1;
+	_showDescription("remote");
+	var autoScroll = setInterval(() => {
+		if(selected != null) {
+			clearInterval(autoScroll);
+			return;
+		}
+		_showDescription(all_keys[(i++)%all_keys.length]);
+	}, 5000);
+
 	var friday = [
 		["12:00 pm - 2:00 pm", "Care Pack Pick-Up"],
 		["6:00 pm", "Opening Ceremony"],

@@ -279,11 +279,26 @@ button > a:hover {
 .track-section {
   padding-top: 5%;
   text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.track-section:hover {
+  background-color: #413181;
+}
+.track-description-selected {
+  background-color: #594a93;
+}
+
+#track-description {
+  margin-top: 5%;
+  margin-left: 3%;
+  width: 70%;
 }
 
 .track-image {
   height: 10em;
 }
+
 
 /* Schedule */
 #schedule {
