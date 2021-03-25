@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import 'font-awesome.min.css';
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300");
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 @font-face {
   font-family: 'goodtimes';
   src: url('../../assets/fonts/goodtimes.ttf'); /* IE9 Compat Modes */
@@ -382,6 +383,11 @@ th {
 
 .signup-step {
   margin-top: 2%;
+}
+
+span.code {
+  font-weight: bold;
+  font-family: "Inconsolata";
 }
 
 /* Eligibility */
