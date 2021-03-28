@@ -358,22 +358,22 @@ th {
   text-align: center;
 }
 
+.category-winner {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:rgb(93, 69, 146)
+}
+
 .prize-icon {
-  font-size: 64px;
+  font-size: 128px;
 }
 
-.prize-icon.fa-trophy {
-  color:rgb(255, 189, 7);
+@media only screen and (max-width: 800px) {
+  .category-winner {
+    width: 80%;
+  }  
 }
-
-.prize-icon.fa-lightbulb {
-  color:rgb(252, 208, 208);
-}
-
-.prize-icon.fa-sim-card {
-  color:rgb(7, 255, 85);
-}
-
 /* Sign up section */
 
 #signup-section {
