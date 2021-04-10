@@ -341,6 +341,17 @@ th {
   border: 1px solid rgb(73, 73, 73);
 }
 
+/* Workshops */
+.workshop-section {
+  padding-top: 5%;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.workshop-image {
+  height: 10em;
+}
+
 /* Prizes */
 #prizes {
   background-color: #3c3676;
