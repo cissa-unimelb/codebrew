@@ -385,6 +385,13 @@ th {
     width: 80%;
   }  
 }
+
+/* Submissions */
+#submissions {
+  background-color: #190F43;
+  color: white;
+}
+
 /* Sign up section */
 
 #signup-section {
