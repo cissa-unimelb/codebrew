@@ -358,7 +358,7 @@ th {
   color: white;
 }
 
-.category {
+.category, .raffle-prize {
   border-radius: 25px;
   background-color: rgb(40, 10, 105);
   color: white;
@@ -367,6 +367,9 @@ th {
   padding-top: 3%;
   padding-bottom: 3%;
   text-align: center;
+}
+.raffle-prize > img {
+  width: 80%;
 }
 
 .category-winner {
