@@ -368,6 +368,11 @@ th {
   padding-bottom: 3%;
   text-align: center;
 }
+
+.raffle-prize {
+  background-color: #5b6695; 
+}
+
 .raffle-prize > img {
   width: 80%;
 }
