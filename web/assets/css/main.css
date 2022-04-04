@@ -121,7 +121,7 @@ button > a:hover {
 
 /* Banner */
 #banner {
-  background-image: url('../../images/alt-banner.png');
+  background-image: url('../../images/banner-2022.png');
   background-position: center;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -160,8 +160,8 @@ button > a:hover {
 #ticket {
   margin-top: 3%;
   padding: 10px 20px 10px 20px;
-  background: #7C1DC9;
-  border: 2px solid #7C1DC9;
+  background: #ACEC00;
+  border: 2px solid #ACEC00;
   box-sizing: border-box;
   border-radius: 100px;
   transition: all 0.3s ease 0s;
@@ -176,21 +176,21 @@ button > a:hover {
   margin-top: 3%;
   margin-left: 3%;
   padding: 10px 20px 10px 20px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 100px;
-  background-color: #250555;
+  background-color: #202122;
   transition: all 0.3s ease 0s;
 }
 
 #signup:hover {
-  box-shadow: -3px 7px #bc96ba;
+  box-shadow: -3px 7px #ACEC00;
   transform: translate(3px, -5px) ;
 }
 
 
 #countdown {
-  background: #5e0780;
+  background: #ACEC00;
   font-family: courier;
   font-size: 64px;
   border-radius: 10px;
@@ -236,7 +236,7 @@ button > a:hover {
 
 @media only screen and (max-width: 800px) {
   #banner {
-    background-image: url('../../images/alt-banner.png');
+    background-image: url('../../images/banner-2022.png');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -255,7 +255,7 @@ button > a:hover {
 /* About */
 #about {
   /* background-image: -moz-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/overlay.png"), -moz-linear-gradient(45deg, #585481, rgba(86, 13, 125, 0.102)), url("../../images/about.jpg"); */
-  background-image: -webkit-linear-gradient(top, rgba(20, 25, 29, 0.225), rgba(28, 48, 68, 0.647)), url("images/overlay.png"), -webkit-linear-gradient(45deg, #43415d40, rgba(92, 12, 135, 0.715)), url("../../images/about.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(20, 25, 29, 0.225), rgba(28, 48, 68, 0.647)), url("images/overlay.png"), -webkit-linear-gradient(45deg, #43415d40, #ACEC00), url("../../images/about.jpg");
   /* background-image: -ms-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/overlay.png"), -ms-linear-gradient(45deg, #585481, rgba(86, 13, 125, 0.65)), url("../../images/about.jpg"); */
   /* background-image: linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/overlay.png"), linear-gradient(45deg, #585481, rgba(86, 13, 125, 0.65)), url("../../images/about.jpg"); */
   color: white;
@@ -273,7 +273,7 @@ button > a:hover {
 /* Tracks */
 
 #tracks {
-  background-color: #190F43;
+  background-color: #212223;
   color: white;
 }
 
@@ -284,10 +284,10 @@ button > a:hover {
 }
 
 .track-section:hover {
-  background-color: #594a93;
+  background-color: #ACEC00;
 }
 .track-description-selected {
-  background-color: #413181;
+  background-color: #ACEC00;
 }
 
 #track-description {
@@ -303,7 +303,7 @@ button > a:hover {
 
 /* Schedule */
 #schedule {
-  background-color:rgba(0, 0, 0, 0.878);
+  background-color:#212223;
   color: rgba(255, 255, 255, 0.776);
   min-height: 60vh;
 }
@@ -311,7 +311,7 @@ button > a:hover {
 #schedule-wrapper {
   margin-top: 3%;
 }
-
+ 
 #eventschedule {
   margin-top: 3%;
 }
@@ -327,7 +327,7 @@ button > a:hover {
 }
 
 .schedule-day:hover {
-  background-color: #645d7dd9;
+  background-color: #212223;
   color: inherit;
 }
 
@@ -336,9 +336,9 @@ th {
 }
 
 .schedule-day.disabled {
-  background-color: #6a52cbd9;
+  background-color: #ACEC00;
   color: inherit;
-  border: 1px solid rgb(73, 73, 73);
+  border: 1px solid #212223;
 }
 
 /* Workshops */
@@ -354,13 +354,13 @@ th {
 
 /* Prizes */
 #prizes {
-  background-color: #3c3676;
+  background-color: #212223;
   color: white;
 }
 
 .category, .raffle-prize {
   border-radius: 25px;
-  background-color: rgb(40, 10, 105);
+  background-color: #ACEC00;
   color: white;
   box-shadow: -5px 7px 12px -3px rgba(0, 0, 0, 0.4);
   transform: translateY(-3px);
@@ -370,7 +370,7 @@ th {
 }
 
 .raffle-prize {
-  background-color: #5b6695; 
+  background-color: #ACEC00; 
 }
 
 .raffle-prize > img {
@@ -381,7 +381,7 @@ th {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  background-color:rgb(93, 69, 146)
+  background-color:#ACEC00
 }
 
 .prize-icon {
@@ -396,14 +396,14 @@ th {
 
 /* Submissions */
 #submissions {
-  background-color: #190F43;
+  background-color: #212223;
   color: white;
 }
 
 /* Sign up section */
 
 #signup-section {
-  background-color: #2c0056;
+  background-color: #212223;
   color: white;
 }
 
@@ -419,7 +419,7 @@ span.code {
 /* Eligibility */
 
 #eligibility {
-  background-color: #190F43;
+  background-color: #212223;
   color: white;
 }
 
@@ -435,16 +435,22 @@ span.code {
   color: rgb(255, 134, 225);
 }
 
+/* Further Information */
+#further-info {
+  background-color:#212223;
+  color: white;
+}
+
 /* FAQ */
 #faq {
-  background-color:rgba(0, 0, 0, 0.878);
+  background-color:#212223;
   color: rgba(255, 255, 255, 0.776);
 }
 
 /* Sponsors */
 #sponsors {
   width: 100%;
-  background-color:rgba(0, 0, 0, 0.878);
+  background-color:#212223;
   color: rgba(255, 255, 255, 0.776);
 }
 
@@ -459,7 +465,7 @@ span.code {
 
 /* Footer */
 #footer {
-  background-color: #2c0056;
+  background-color: #ACEC00;
   color: white;
   text-align: center;
   font-size: 16px;
