@@ -109,6 +109,15 @@ a:hover {
   text-decoration: underline;
 }
 
+footer a {
+  color:#2a069e !important;
+}
+
+footer a:hover {
+  color:#14034b !important;
+  text-decoration: underline;
+}
+
 button > a {
   text-decoration: none;
   color: inherit !important;
@@ -165,6 +174,8 @@ button > a:hover {
   box-sizing: border-box;
   border-radius: 100px;
   transition: all 0.3s ease 0s;
+    color: #000000;
+  font-weight: bold;
 }
 
 #ticket:hover {
@@ -292,8 +303,9 @@ button > a:hover {
 
 #track-description {
   margin-top: 5%;
-  margin-left: 3%;
-  width: 70%;
+  margin-left: 0%;
+  width: 100%;
+  text-align: center;
 }
 
 .track-image {
@@ -361,7 +373,8 @@ th {
 .category, .raffle-prize {
   border-radius: 25px;
   background-color: #ACEC00;
-  color: white;
+  color: #000000;
+  font-weight: bolder;
   box-shadow: -5px 7px 12px -3px rgba(0, 0, 0, 0.4);
   transform: translateY(-3px);
   padding-top: 3%;
@@ -381,7 +394,9 @@ th {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  background-color:#ACEC00
+  background-color:#ACEC00;
+  color: #000000;
+  font-weight: bold;
 }
 
 .prize-icon {
@@ -466,7 +481,8 @@ span.code {
 /* Footer */
 #footer {
   background-color: #ACEC00;
-  color: white;
+  color: #000000;
+  font-weight: bold;
   text-align: center;
   font-size: 16px;
 }
@@ -483,7 +499,7 @@ span.code {
 }
 
 .social {
-  color: #FFFFFF !important;
+  color: #000000 !important;
   transition: all 0.3s ease 0s;
 }
 
