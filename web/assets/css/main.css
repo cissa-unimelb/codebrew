@@ -111,6 +111,7 @@ a:hover {
 
 footer a {
   color:#2a069e !important;
+
 }
 
 footer a:hover {
@@ -132,7 +133,7 @@ button > a:hover {
 #banner {
   background-image: url('../../images/banner-2022.png');
   background-position: center;
-  background-size: 100% 100%;
+  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
 
@@ -143,6 +144,7 @@ button > a:hover {
 
 #logo {
   height: calc(1vw + 32px);
+  width: calc(1vw + 32px);
   margin-top: 5%;
   margin-left: 5%;
   margin-bottom: 5%;
@@ -252,7 +254,6 @@ button > a:hover {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-  
     color: white;
     height: 100vh;
     position: relative;
@@ -374,7 +375,7 @@ th {
   border-radius: 25px;
   background-color: #ACEC00;
   color: #000000;
-  font-weight: bolder;
+  font-weight: bold;
   box-shadow: -5px 7px 12px -3px rgba(0, 0, 0, 0.4);
   transform: translateY(-3px);
   padding-top: 3%;
