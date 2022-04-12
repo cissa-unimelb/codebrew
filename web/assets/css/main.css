@@ -282,6 +282,25 @@ button > a:hover {
   width: 100%;
 }
 
+/* Booklet */
+
+.carousel .item img
+{
+   width: 50%;
+   margin: auto;
+}
+
+.carousel .item 
+{
+   background-color:#212223 ;
+}
+
+#booklet
+{
+  background-color: #212223;
+}
+
+
 /* Tracks */
 
 #tracks {
@@ -512,3 +531,4 @@ span.code {
 #copyright {
   margin-top: 5%;
 }
+
