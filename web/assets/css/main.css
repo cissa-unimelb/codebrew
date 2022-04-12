@@ -171,8 +171,8 @@ button > a:hover {
 #ticket {
   margin-top: 3%;
   padding: 10px 20px 10px 20px;
-  background: #ACEC00;
-  border: 2px solid #ACEC00;
+  background: #91c601;
+  border: 2px solid #91c601;
   box-sizing: border-box;
   border-radius: 100px;
   transition: all 0.3s ease 0s;
@@ -197,13 +197,13 @@ button > a:hover {
 }
 
 #signup:hover {
-  box-shadow: -3px 7px #ACEC00;
+  box-shadow: -3px 7px #91c601;
   transform: translate(3px, -5px) ;
 }
 
 
 #countdown {
-  background: #ACEC00;
+  background: #91c601;
   font-family: courier;
   font-size: 64px;
   border-radius: 10px;
@@ -296,10 +296,10 @@ button > a:hover {
 }
 
 .track-section:hover {
-  background-color: #ACEC00;
+  background-color: #91c601;
 }
 .track-description-selected {
-  background-color: #ACEC00;
+  background-color: #91c601;
 }
 
 #track-description {
@@ -349,7 +349,7 @@ th {
 }
 
 .schedule-day.disabled {
-  background-color: #ACEC00;
+  background-color: #91c601;
   color: inherit;
   border: 1px solid #212223;
 }
@@ -373,7 +373,7 @@ th {
 
 .category, .raffle-prize {
   border-radius: 25px;
-  background-color: #ACEC00;
+  background-color: #91c601;
   color: #000000;
   font-weight: bold;
   box-shadow: -5px 7px 12px -3px rgba(0, 0, 0, 0.4);
@@ -384,7 +384,7 @@ th {
 }
 
 .raffle-prize {
-  background-color: #ACEC00; 
+  background-color: #91c601; 
 }
 
 .raffle-prize > img {
@@ -395,7 +395,7 @@ th {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  background-color:#ACEC00;
+  background-color:#91c601;
   color: #000000;
   font-weight: bold;
 }
@@ -481,7 +481,7 @@ span.code {
 
 /* Footer */
 #footer {
-  background-color: #ACEC00;
+  background-color: #91c601;
   color: #000000;
   font-weight: bold;
   text-align: center;
