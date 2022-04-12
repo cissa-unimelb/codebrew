@@ -286,15 +286,28 @@
 <section id="schedule">
 	<div class="container">
 		<h1>Schedule</h1>
+		<!-- TODO: Fix this! -->
 		<div id="schedule-wrapper">
-			<p>TBD</p>
-			<!-- <table id="eventschedule" class="table table-bordered">
+			<button class="schedule-day" id="pre_hack" onclick='switchSchedule("pre_hack")'>Pre-Hack Workshops</button>
+			<button class="schedule-day" id="thursday" onclick='switchSchedule("thursday")'>Thursday 21st</button>
+			<button class="schedule-day" id="friday" onclick='switchSchedule("friday")'>Friday 22nd</button>
+			<button class="schedule-day" id="saturday" onclick='switchSchedule("saturday")'>Sunday 23rd</button>
+			<button class="schedule-day" id="sunday" onclick='switchSchedule("sunday")'>Saturday 24th</button>
+			<table id="eventschedule" class="table table-bordered">
 				<tr>
 					<th scope="row"></th>
 					<td></td>
 				</tr>
-			</table> -->
+			</table>
 		</div>
+		<br/>
+		<ul id="schedule-notes">
+			<span class="note-star">*</span> <b>Friday 22nd:</b> Floating mentoring and hacking continues throughoutt the day.
+			<hr/>
+			<span class="note-star">*</span> <b>Friday 22nd:</b> Arts Wests stays open overnight. However, you will not be able to re-enter if you leave after 9.30 pm.
+			<hr/>
+			<span class="note-star">*</span> <b>Saturday 23rd:</b> Arts West stays open from Friday night.
+		</ul>
 	</div>
 </section>
 
@@ -673,38 +686,43 @@
 		_showDescription(all_keys[(i++)%all_keys.length]);
 	}, 5000);
 
-	var mon_wed = [
-		["TBA", "Codebrew workshops on technical, product and business skills"],
+	var pre_hack = [
+		["DATE", "TIME", "ACTIVITY"],
+		["Monday 18th", "2:00-3:00 pm", "Git workshop"],
+		["Tuesday 19th", "5.30-6.30 pm", "UI/UX workshop"],
+		["Wednesday 20th", "10-11:30 pm", "Intro to web workshop"],
 	];
 
 	var thursday = [
-		["12:00 pm", "Opening Ceremony"],
-		["1:00 pm", "Team Fromation and Pick Up Goodies"],
-		["3:00 pm", "START HACKING"],
-		["7:00 pm", "Free Dinner"],
+		["TIME", "ACTIVITY"],
+		["12:00-12:30 pm", "Opening ceremony at Arts West and online"],
+		["12:30 pm", "Team formation session (both online and in-person)"],
+		["1:30 pm", "HACKING STARTS"],
+		["2:00 pm", "Floating mentoring starts"],
+		["6:30 pm", "Pizza Dinner"],
+		["9:30 pm", "Arts West closes"],
 	];
 
 	
 	var friday = [
-		["10:00 am", "Mentoring Session"],
-		["2:00 pm", "Pitch Workshop"],
-		["5:00 pm", "Mentoring Session"],
-		["7:00 pm", "Free Dinner"],
+		["TIME", "ACTIVITY"],
+		["8:00 am", "Arts West opens"],
+		["12:00 pm", "BBQ lunch"],
+		["6:30 pm", "Guzman Y Gomez Dinner"],
 	];
 
 	var saturday = [
-		["10:00 am", "Mentoring Session"],
-		["12:00 pm", "Free Lunch"],
-		["3:00 pm", "STOP HACKING"],
-		["4:00 pm", "Board Games Afternoon"],
-		["8:00 pm", "Movie Night"],
+		["TIME", "ACTIVITY"],
+		["12:00 pm", "Subway Lunch"],
+		["3:00 pm", "HACKING ENDS"],
+		["3:30-4.30 pm", "Board games afternoon"],
 	];
 
 	var sunday = [
-		["9:00 am", "Top 2 of Each Track Announced"],
-		["6:00 pm", "Live Pitching and Judging"],
-		["8:00 pm", "Winners Announced"],
-		["8:15 pm", "Light Networking"],
+		["TIME", "ACTIVITY"],
+		["9:00 am", "Finalists revelaed and finalists start working on live pitch"],
+		["2:00-4:00 pm", "Final presentations and judging"],
+		["4:00-5:00pm", "Casual networking and socialising"],
 	];
 
 
@@ -748,7 +766,7 @@
 
 	// Call the method on load
 	switchIframeSrc();
-	switchSchedule("mon-wed");
+	switchSchedule("pre_hack");
 
 
 
