@@ -136,7 +136,7 @@ button > a:hover {
   background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-
+  background-color: #202122;
   color: white;
   height: 100vh;
   position: relative;
