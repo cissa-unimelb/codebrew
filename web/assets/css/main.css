@@ -249,7 +249,7 @@ button > a:hover {
 
 @media only screen and (max-width: 800px) {
   #banner {
-    background-image: url('../../images/banner-2022.png');
+    background-image: url('../../images/banner-2022.svg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
