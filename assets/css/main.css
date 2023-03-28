@@ -131,7 +131,7 @@ button > a:hover {
 
 /* Banner */
 #banner {
-  background-image: url('../../images/banner-2022.png');
+  background-image: url('../../images/2023codebrewbanner.png');
   background-position: center;
   background-size: 100%;
   background-attachment: fixed;
@@ -153,6 +153,7 @@ button > a:hover {
 #theme {
   font-family: 'goodtimes';
   font-size: calc(32px + 1vw);
+  color: black;
 }
 
 #banner-content {
@@ -162,6 +163,7 @@ button > a:hover {
 #banner-description {
   margin-top: 3%;
   width:50%;
+  color: black;
 }
 
 #date {
@@ -171,8 +173,8 @@ button > a:hover {
 #ticket {
   margin-top: 3%;
   padding: 10px 20px 10px 20px;
-  background: #91c601;
-  border: 2px solid #91c601;
+  background: #15c0c0;
+  border: 2px solid #15c0c0;
   box-sizing: border-box;
   border-radius: 100px;
   transition: all 0.3s ease 0s;
@@ -197,13 +199,13 @@ button > a:hover {
 }
 
 #signup:hover {
-  box-shadow: -3px 7px #91c601;
+  box-shadow: -3px 7px #15c0c0;
   transform: translate(3px, -5px) ;
 }
 
 
 #countdown {
-  background: #91c601;
+  background: #15c0c0;
   font-family: courier;
   font-size: 64px;
   border-radius: 10px;
@@ -218,6 +220,7 @@ button > a:hover {
 
 .event-socials {
   text-align: center;
+  color: black;
 }
 
 .event-social.fab {
@@ -258,8 +261,9 @@ button > a:hover {
     height: 100vh;
     position: relative;
   }
-  
+
   #banner-description {
+    color: black;
     width:75%;
   }
 }
@@ -267,7 +271,7 @@ button > a:hover {
 /* About */
 #about {
   /* background-image: -moz-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/overlay.png"), -moz-linear-gradient(45deg, #585481, rgba(86, 13, 125, 0.102)), url("../../images/about.jpg"); */
-  background-image: -webkit-linear-gradient(top, rgba(20, 25, 29, 0.225), rgba(28, 48, 68, 0.647)), url("images/overlay.png"), -webkit-linear-gradient(45deg, #43415d40, #ACEC00), url("../../images/about.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(20, 25, 29, 0.225), rgba(28, 48, 68, 0.647)), url("images/overlay.png"), -webkit-linear-gradient(45deg, #43415d40, #00bfff), url("../../images/about.jpg");
   /* background-image: -ms-linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/overlay.png"), -ms-linear-gradient(45deg, #585481, rgba(86, 13, 125, 0.65)), url("../../images/about.jpg"); */
   /* background-image: linear-gradient(top, rgba(21, 27, 33, 0.6), rgba(21, 27, 33, 0.6)), url("images/overlay.png"), linear-gradient(45deg, #585481, rgba(86, 13, 125, 0.65)), url("../../images/about.jpg"); */
   color: white;
@@ -290,7 +294,7 @@ button > a:hover {
    margin: auto;
 }
 
-.carousel .item 
+.carousel .item
 {
    background-color:#212223 ;
 }
@@ -315,10 +319,10 @@ button > a:hover {
 }
 
 .track-section:hover {
-  background-color: #91c601;
+  background-color: #15c0c0;
 }
 .track-description-selected {
-  background-color: #91c601;
+  background-color: #15c0c0;
 }
 
 #track-description {
@@ -343,7 +347,7 @@ button > a:hover {
 #schedule-wrapper {
   margin-top: 3%;
 }
- 
+
 #eventschedule {
   margin-top: 3%;
 }
@@ -368,7 +372,7 @@ th {
 }
 
 .schedule-day.disabled {
-  background-color: #91c601;
+  background-color: #15c0c0;
   color: inherit;
   border: 1px solid #212223;
 }
@@ -392,7 +396,7 @@ th {
 
 .category, .raffle-prize {
   border-radius: 25px;
-  background-color: #91c601;
+  background-color: #15c0c0;
   color: #000000;
   font-weight: bold;
   box-shadow: -5px 7px 12px -3px rgba(0, 0, 0, 0.4);
@@ -403,7 +407,7 @@ th {
 }
 
 .raffle-prize {
-  background-color: #91c601; 
+  background-color: #15c0c0;
 }
 
 .raffle-prize > img {
@@ -414,7 +418,7 @@ th {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  background-color:#91c601;
+  background-color:#15c0c0;
   color: #000000;
   font-weight: bold;
 }
@@ -426,7 +430,7 @@ th {
 @media only screen and (max-width: 800px) {
   .category-winner {
     width: 80%;
-  }  
+  }
 }
 
 /* Submissions */
@@ -500,7 +504,7 @@ span.code {
 
 /* Footer */
 #footer {
-  background-color: #91c601;
+  background-color: #15c0c0;
   color: #000000;
   font-weight: bold;
   text-align: center;
