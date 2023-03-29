@@ -153,7 +153,6 @@ button > a:hover {
 #theme {
   font-family: 'goodtimes';
   font-size: calc(32px + 1vw);
-  color: black;
 }
 
 #banner-content {
@@ -163,7 +162,6 @@ button > a:hover {
 #banner-description {
   margin-top: 3%;
   width:50%;
-  color: black;
 }
 
 #date {
@@ -220,7 +218,6 @@ button > a:hover {
 
 .event-socials {
   text-align: center;
-  color: black;
 }
 
 .event-social.fab {
@@ -240,7 +237,7 @@ button > a:hover {
 }
 
 .event-social {
-  color: #FFFFFF !important;
+  color: #000000 !important;
   transition: all 0.3s ease 0s;
 }
 
