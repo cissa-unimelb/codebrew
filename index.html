@@ -331,12 +331,12 @@
 			<div class="col-md-6 workshop-section">
 				<img src="./images/git_logo.png" class="workshop-image"/>
 				<h3>Git and Deployment Workshop</h3>
-				<p>Thursday April 14 2023 11am - 12pm</p>
+				<p>Friday April 14 2023 11am - 12pm</p>
 			</div>
 			<div class="col-md-6 workshop-section">
 				<img src="./images/figma_logo.png" class="workshop-image"/>
 				<h3>Pitching Workshop</h3>
-				<p>Thursday April 14 2023 4.00pm - 4.30pm</p>
+				<p>Friday April 14 2023 4.00pm - 4.30pm</p>
 			</div>
 		</div>
 
@@ -680,18 +680,19 @@
 
 	var pre_hack = [
 		["DATE", "TIME", "ACTIVITY"],
-		["Monday 18th", "2:00-3:00 pm", "Git workshop"],
-		["Tuesday 19th", "5.30-6.30 pm", "UI/UX workshop"],
-		["Wednesday 20th", "10-11:30 am", "Intro to web workshop"],
+		["Thursday 13th", "2:00-3:00 pm", "Frontend Workshop"],
+		["Thursday 13th", "3:00-4:00 pm", "Backend Workshop"],
+		["Friday 14th", "11:00-12:00 pm", "Git Workshop"],
+		["Friday 14th", "4:00-5:00pm", "Pitching Workshop"]
 	];
 
 	var thursday = [
 		["TIME", "ACTIVITY"],
-		["12:00-12:30 pm", "Opening ceremony at Arts West and online"],
-		["12:30 pm", "Team formation session (both online and in-person)"],
-		["1:30 pm", "HACKING STARTS"],
-		["2:00 pm", "Floating mentoring starts"],
-		["6:30 pm", "Pizza dinner"],
+		["12:00-12:30 pm", "Opening ceremony at Arts West"],
+		["12:30 pm", "Team formation session"],
+		["1:00 pm", "HACKING STARTS + sushi platters"],
+		["2:00 pm", "Frontend Workshop"],
+		["3:00 pm", "Backend Workshop"],
 		["9:30 pm", "Arts West closes"],
 	];
 
@@ -699,22 +700,25 @@
 	var friday = [
 		["TIME", "ACTIVITY"],
 		["8:00 am", "Arts West opens"],
-		["12:00 pm", "BBQ lunch"],
-		["6:30 pm", "Guzman Y Gomez dinner"],
+		["11:00 am", "Git and Deployment Workshop"],
+		["12:00 pm", "GYG Lunch"],
+		["4:00 pm", "Pitching Workshop"],
+		["9:30 pm", "Arts West closes"]
 	];
 
 	var saturday = [
 		["TIME", "ACTIVITY"],
-		["8:00 am", "Arts West allows re-entering"],
-		["12:00 pm", "Subway lunch"],
-		["3:00 pm", "HACKING ENDS"],
-		["3:30-4.30 pm", "Board games afternoon"],
+		["8:00 am", "Arts West opens"],
+		["12:00 pm", "Viet lunch"],
+		["1:00 pm", "Mentor time"],
+		["5:00 pm", "HACKING ENDS"],
 	];
 
 	var sunday = [
 		["TIME", "ACTIVITY"],
 		["9:00 am", "Finalists revealed and finalists start working on live pitch"],
-		["2:00-4:00 pm", "Final presentations and judging"],
+		["1:00 pm", "Final presentations and judging"],
+		["3:00 pm", "Announce winners"],
 		["4:00-5:00pm", "Casual networking and socialising"],
 	];
 
@@ -734,7 +738,7 @@
 	}
 
 	// Function to load new schedule table
-	function switchSchedule(day) {
+	function 	switchSchedule(day) {
 		// Grey out the button pressed, un-grey out the others. I know, I'm lazy.
 		var elems = document.getElementsByClassName('schedule-day');
 		for(var i = 0; i < elems.length; i++) {
