@@ -30,9 +30,9 @@
 
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<link rel="shortcut icon" href="icon-2022.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="icon-2022.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="icon-2022.png">
+	<link rel="shortcut icon" href="images/icon-2023.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icon-2023.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icon-2023.png">
 	<link rel="manifest" href="manifest.json">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="theme-color" content="#fff">
@@ -127,7 +127,7 @@
 
 <!-- Banner Splash -->
 <div id="banner">
-	<img src="./images/icon-2022.png" id="logo"/>
+	<img src="./images/icon-2023.png" id="logo"/>
 	<div id="banner-content">
 		<div id="theme">
 			TURNING THE TIDE
@@ -162,7 +162,6 @@
 			<span id="hashtag">#ibrewed2023</span><br/>
 			<a href="https://www.facebook.com/hashtag/ibrewed2023" class="fab fa-facebook-f event-social" target="_blank"></a>
 			<a href="https://www.instagram.com/explore/tags/ibrewed203/" class="fab fa-instagram event-social" target="_blank"></a>
-			<a href="https://twitter.com/hashtag/ibrewed2023" class="fab fa-twitter event-social" target="_blank"></a>
 		</div>
 	</div>
 </div>
@@ -286,7 +285,7 @@
 		<h1>Schedule</h1>
 		<!-- TODO: Fix this! -->
 		<div id="schedule-wrapper">
-			<button class="schedule-day" id="pre_hack" onclick='switchSchedule("pre_hack")'>Pre-Hack Workshops</button>
+			<button class="schedule-day" id="pre_hack" onclick='switchSchedule("pre_hack")'>Hackathon Workshops</button>
 			<button class="schedule-day" id="thursday" onclick='switchSchedule("thursday")'>Thursday 13th</button>
 			<button class="schedule-day" id="friday" onclick='switchSchedule("friday")'>Friday 14th</button>
 			<button class="schedule-day" id="saturday" onclick='switchSchedule("saturday")'>Saturday 15th</button>
@@ -300,11 +299,10 @@
 		</div>
 		<br/>
 		<ul id="schedule-notes">
-			<span class="note-star">*</span> <b>Friday 14th:</b> Floating mentoring and hacking continues throughout the day.
+			<span class="note-star">*</span> <b>Thursday 13th, Friday 14th, Saturday 15th:</b> Floating mentoring from 1pm - 4pm and hacking continues throughout the day.
 			<hr/>
-			<span class="note-star">*</span> <b>Friday 14th:</b> Arts Wests stays open overnight. However, you will not be able to re-enter if you leave after 9:30 pm.
+			<span class="note-star">*</span> <b>All days:</b> Arts west opens at 8am and closes at 9.30pm
 			<hr/>
-			<span class="note-star">*</span> <b>Saturday 15th:</b> Arts West stays open from Friday night. Floating mentoring continues until 3 pm.
 		</ul>
 	</div>
 </section>
@@ -585,7 +583,7 @@
 			<div class="col-sm-3">
 				<h3 class="question-title">How much is a ticket?</h3>
 				<p>
-					$10 for early bird tickets (ending 3rd April), $20 for general tickets.
+					$10 for early bird tickets (ending 5th April), $20 for general tickets.
 				</p>
 			</div>
 			<div class="col-sm-3 col-sm-offset-1">
@@ -640,17 +638,9 @@
 <!-- Scripts -->
 <script>
 	var track_descriptions = {
-		"carbon-and-energy" 	: `Global carbon emissions have become an increasingly prominent problem and little has changed in the way our world handles energy storage
-								and production. This track is everything related to bolstering clean energy sources and reducing carbon emissions. Hackers are encouraged to
-								brainstorm ideas on how to promote cleaner transportation, optimise energy usage within the home, inform people about carbon emissions, and
-								promote renewable energy sources.`,
-		"waste" 				: `The resource production of the modern world is nothing like anything history has witnessed. This drives our comfortable lives but also results in
-								unprecedented waste production. This track is all about utilising technology to reduce our impact on the environment. Hackers are urged to formulate
-								ideas on how to bolster recycling, reduce usage of products with harmful waste, lessen the consumption of single use items and promote composting.`,
-		"food-and-nutrition" 	: `Obesity and diet related health issues are a prominent problem and food production takes its toll on the earth. This track prompts
-								for technology to be employed to assist people to adjust to a healthier lifestyle for them and for the earth. Hackers are prompted to
-								create solutions to inform people about the benefits of a healthier, more sustainable lifestyle, make this lifestyle more accessible and
-								ensure they are able to maintain it.`
+		"carbon-and-energy" 	: `The Sustainability and Environment project theme focuses on promoting sustainable practices and environmental stewardship to help mitigate the impacts of climate change. This track encourages hackers to develop innovative solutions that address the pressing environmental challenges facing the planet. Participants are encouraged to explore ideas that promote sustainable resource management, reduce waste and pollution, conserve biodiversity, and promote sustainable consumption patterns. The projects can include initiatives related to sustainable agriculture, sustainable transportation, sustainable energy production, and conservation of natural resources, among others. The goal of this theme is to encourage participants to develop creative solutions that contribute to a more sustainable future for all.`,
+		"waste" 				: `The Disruptive Technologies project theme focuses on exploring cutting-edge technologies that have the potential to fundamentally transform various industries and sectors. This track encourages participants to think outside the box and develop innovative solutions that leverage emerging technologies such as artificial intelligence, blockchain, 5G, and the Internet of Things (IoT), among others. Participants are encouraged to brainstorm ideas that disrupt traditional business models and introduce new, more efficient ways of delivering products and services. The projects can include initiatives related to digital transformation, smart cities, fintech, healthcare, and education, among others. The goal of this theme is to encourage participants to develop disruptive solutions that challenge the status quo and pave the way for a more innovative and prosperous future.`,
+		"food-and-nutrition" 	: `The Health and Society project theme focuses on exploring the complex relationship between health and social determinants. This track encourages participants to develop innovative solutions that promote health equity, social justice, and community resilience. Participants are encouraged to brainstorm ideas that address the social, economic, and environmental factors that impact health outcomes, such as poverty, access to healthcare, social isolation, and environmental pollution. The projects can include initiatives related to healthcare delivery, mental health, social support, and community engagement, among others. The goal of this theme is to encourage participants to develop solutions that promote health and well-being across diverse populations and address the root causes of health disparities.`
 
 	};
 
@@ -682,7 +672,7 @@
 		["DATE", "TIME", "ACTIVITY"],
 		["Thursday 13th", "2:00-3:00 pm", "Frontend Workshop"],
 		["Thursday 13th", "3:00-4:00 pm", "Backend Workshop"],
-		["Friday 14th", "11:00-12:00 pm", "Git Workshop"],
+		["Friday 14th", "11:00-12:00 pm", "Git and Deployment Workshop"],
 		["Friday 14th", "4:00-5:00pm", "Pitching Workshop"]
 	];
 
@@ -692,8 +682,7 @@
 		["12:30 pm", "Team formation session"],
 		["1:00 pm", "HACKING STARTS + sushi platters"],
 		["2:00 pm", "Frontend Workshop"],
-		["3:00 pm", "Backend Workshop"],
-		["9:30 pm", "Arts West closes"],
+		["3:00 pm", "Backend Workshop"]
 	];
 
 
@@ -702,15 +691,13 @@
 		["8:00 am", "Arts West opens"],
 		["11:00 am", "Git and Deployment Workshop"],
 		["12:00 pm", "GYG Lunch"],
-		["4:00 pm", "Pitching Workshop"],
-		["9:30 pm", "Arts West closes"]
+		["4:00 pm", "Pitching Workshop"]
 	];
 
 	var saturday = [
 		["TIME", "ACTIVITY"],
 		["8:00 am", "Arts West opens"],
 		["12:00 pm", "Viet lunch"],
-		["1:00 pm", "Mentor time"],
 		["5:00 pm", "HACKING ENDS"],
 	];
 
